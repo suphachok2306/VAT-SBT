@@ -1,0 +1,116 @@
+<div class="container">
+  <div class="box-content">
+    <div class="topic line-b mb-4">
+      <h4 class="navy">คุณสมบัติผู้ประกอบการ</h4>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">เป็นสมาชิกสมาคม <span class="red">*</span></label>
+      </div>
+      <div class="col-9">
+        <input class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-6 col-form-label">วันที่เริ่มต้นเป็นสมาชิก <span class="red">*</span></label>
+          <div class="col-6">
+            <div class="form-icon">
+              <i class="material-icons-outlined right">calendar_today</i>
+              <input class="form-control" type="text" placeholder="วัน/เดือน/ปี" bsDatepicker>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-6 col-form-label">วันที่หมดอายุการเป็นสมาชิก <span class="red">*</span></label>
+          <div class="col-6">
+            <div class="form-icon">
+              <i class="material-icons-outlined right">calendar_today</i>
+              <input class="form-control" type="text" placeholder="วัน/เดือน/ปี" bsDatepicker>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-6 col-form-label">ใบอนุญาตค้าของเก่าฉบับที่</label>
+          <div class="col-6">
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-6 col-form-label">เลขที่ใบอนุญาตค้าของเก่า</label>
+          <div class="col-6">
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-6 col-form-label">วันที่อนุญาต</label>
+          <div class="col-6">
+            <div class="form-icon">
+              <i class="material-icons-outlined right">calendar_today</i>
+              <input class="form-control" type="text" placeholder="วัน/เดือน/ปี" bsDatepicker>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-6 col-form-label">วันที่หมดอายุ</label>
+          <div class="col-6">
+            <div class="form-icon">
+              <i class="material-icons-outlined right">calendar_today</i>
+              <input class="form-control" type="text" placeholder="วัน/เดือน/ปี" bsDatepicker>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-3">
+        <label class="col-form-label">การยื่นแบบแสดงรายการภาษีมูลค่าเพิ่ม</label>
+      </div>
+      <div class="col-9">
+        <div class="form-check">
+          <input id="radio-3" class="checkbox-custom" name="radio2" type="radio" checked="">
+          <label for="radio-3" class="radio-label ml-0">ยื่นแบบ ภ.พ.30 เป็นรายสถานประกอบการ</label>
+          <input id="radio-4" name="radio2" type="radio" class="checkbox-custom">
+          <label for="radio-4" class="radio-label ml-0 align-items-center">ยื่นแบบ ภ.พ.30 รวมกัน ณ สาขา 3
+            <div class="col-3 ml-2">
+              <input class="form-control">
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">วัน/เดือน/ปี ภาษีที่เริ่ม</label>
+      </div>
+      <div class="col-3">
+        <div class="form-icon">
+          <i class="material-icons-outlined right">calendar_today</i>
+          <input class="form-control" type="text" placeholder="วัน/เดือน/ปี" bsDatepicker>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-3 line-t mt-5">
+  <div class="container btn-footer">
+    <button type="button" class="btn btn-light mr-auto" style="min-width: 100px;" (click)="goBack()">ย้อนกลับ</button>
+    <button type="button" class="btn btn-primary" style="min-width: 100px;" (click)="goNext()">ต่อไป</button>
+  </div>
+</div>

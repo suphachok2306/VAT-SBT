@@ -1,0 +1,146 @@
+$border-color: #CCCCCC;
+$main-color: #0F3057;
+$blue-color: #32A2CD;
+$bluelight-color: #D6ECF5;
+$bluelight-fade-color:rgb(173 218 235 / 20%);
+$bluefade: #ADDAEB;
+$bluelink:#2677D9;
+$graybg-color:#F2F2F2;
+$graylight-color: #E6E6E6;
+$graylight2-color: #999999;
+$grayfade-color: #F7F7F7;
+$gray-color: #666666;
+$dark-color: #08182B;
+$red-color: #BA2929;
+$red-fade-color: rgb(186 41 41 / 30%);
+$yellow-color:#EABB35;
+$yellow-fade-color:#FDF8EB;
+$green-color:#00C98D;
+$green-fade-color: rgb(0 201 141 / 20%);
+$orange-color:#EA8135;
+
+// $bordergray-color:#dee2e6;
+$white-color:#fff;
+
+/*---navy-colors---*/
+.navy{
+    color: $main-color !important;
+}
+.navy-bg{
+    background-color: $main-color !important;
+}
+
+/*---gray-colors---*/
+
+
+.graylight2{
+  color: $graylight2-color !important;
+}
+.graylight{
+    color: $graylight-color !important;
+}
+.graylight-bg{
+    background-color: $graylight-color !important;
+}
+.grayfade-bg{
+  background: $grayfade-color;
+}
+.gray{
+    color: $gray-color !important;
+}
+.gray-bg{
+  background: $graybg-color;
+}
+/*---dark-colors---*/
+.dark,body{
+    color: $dark-color !important;
+}
+.dark-bg{
+    background: $dark-color !important;
+}
+
+
+/*---blue-colors---*/
+.blue{
+    color: $blue-color !important;
+}
+.blue-bg{
+    background-color: $blue-color !important;
+}
+.bluefade-bg{
+    background-color: $bluefade !important;
+}
+
+.bluelight{
+    color: $bluelight-color !important;
+}
+.bluelight-bg{
+    background-color: $bluelight-color !important;
+}
+.bluelink{
+  color: $bluelink;
+}
+
+.bluelink-bg{
+  background-color: $bluelink;
+}
+
+.blueprimary-bg{
+  background-color: $main-color;
+}
+.bluelight-fade-bg{
+    background-color: $bluelight-fade-color !important;
+}
+
+/*---Validation-colors---*/
+.red{
+    color: $red-color !important;
+}
+.red-bg{
+    background: $red-color !important;
+}
+.green{
+  color: $green-color;
+}
+.green-bg{
+  background: $green-color;
+}
+.orange{
+  color: $orange-color;
+}
+.orange-bg{
+  background-color: $orange-color;
+}
+
+
+.yellow-fade-color-bg{
+  background: $yellow-fade-color;
+}
+.yellow{
+  color: $yellow-color;
+}
+.yellow-bg{
+  background: $yellow-color;
+}
+
+
+
+.white{
+  color: $white-color;
+}
+
+/*---Border-colors---*/
+.border-color{
+    color: $border-color !important;
+}
+
+
+
+
+.colorpage{
+    .box{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}

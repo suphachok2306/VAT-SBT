@@ -1,0 +1,178 @@
+<div class="container pb-1">
+    <div class="mb-5 mt-4">
+        <div class="tab-content mb-3" id="myTabContent">
+            <form class="form-search pt-2" style="background-color: #ffffff">
+                <div class="form-group">
+                    <div class="topic navy line-b mt-2 mb-3">
+                        <h4>บันทึกรายการ</h4>
+                    </div>
+                </div>
+                <div class="form-group row mt-5">
+                    <div class="col-2"></div>
+                    <div class="col-2 d-flex justify-content-start">
+                        <label class="form-label mt-2">ระบบงาน</label>
+                    </div>
+                    <div class="col-5">
+                        <select name="cars" class="form-control">
+                            <option value="">ระบบบันทึกข้อมูลภาษีมูลค่าเพิ่มและภาษีธุรกิจเฉพาะ</option>
+                            <option value="">ระบบบันทึกข้อมูลภาษีมูลค่าเพิ่มและภาษีธุรกิจเฉพาะ (2)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2"></div>
+                    <div class="col-2 d-flex justify-content-start">
+                        <label class="form-label mt-2">กลุ่มสิทธิผู้ใช้ระบบงาน</label>
+                    </div>
+                    <div class="col-4">
+                        <select name="cars" class="form-control">
+                            <option value="">เจ้าหน้าที่บันทึกข้อมูล</option>
+                            <option value="">หัวหน้างานบันทึก</option>
+                            <option value="">ผู้ดูรายงาน</option>
+                            <option value="">ผู้ดูแลระบบ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2"></div>
+                    <div class="col-2 d-flex justify-content-start">
+                        <label class="form-label mt-2">เมนูระบบงาน</label>
+                    </div>
+                    <div class="col-4">
+                        <select name="cars" class="form-control">
+                            <option value="">บันทึกแบบคำขอ</option>
+                            <option value="">พิจารณาคําขอ</option>
+                            <option value="">รายงาน</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2"></div>
+                    <div class="col-2 d-flex justify-content-start">
+                        <label class="form-label mt-2">สิทธิในการใช้งาน</label>
+                    </div>
+                    <div class="col-3">
+                        <select name="cars" class="form-control">
+                            <option value="">ทั้งหมด</option>
+                            <option value="">ค้นหา</option>
+                            <option value="">เพิ่ม</option>
+                            <option value="">เรียกดู</option>
+                            <option value="">แก้ไข</option>
+                            <option value="">ลบ</option>
+                            <option value="">พิมพ์</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-4 mb-3">
+                    <div class="mx-3" style="width: 120px;">
+                        <button type="button" class="btn btn-primary" style="width:100%">
+                            บันทึก
+                        </button>
+                    </div>
+                    <div class="mx-3" style="width: 120px;">
+    
+                        <button type="button" class="btn btn-light" style="width:100%">
+                            ล้างข้อความ
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="d-flex justify-content-between mt-5">
+                <div class="title p-2">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  ผลการค้นหา
+                </div>
+                <label class="mt-2"
+                  >แสดงหน้าละ
+                  <select
+                    class="text-center"
+                    style="border-radius: 0.25rem; border: 1px solid darkgray"
+                  >
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                  รายการ
+                </label>
+              </div>
+            <table class="table">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th id="markId" rowspan="1" class="align-items-center d-flex justify-content-center"> 
+                            <input id="checkAll" class="checkbox-custom mr-2" [(ngModel)]="checkAll" (click)="logCheckBox()" type="checkbox"> 
+                            <div>ใช้งาน</div>
+                        </th>
+                        <th id="recOffName" rowspan="1" style="width: 30%;">รหัสโปรแกรม</th>
+                        <th id="recNum" rowspan="1" colspan="4">ชื่อโปรแกรม</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr id="clickNextPage">
+                        <th id="markId" rowspan="1"> 
+                            <input id="ck1" class="checkbox-custom" name="checkbox" type="checkbox">
+                        </th>
+                        <td>VPP0130402</td>
+                        <td class="text-left" colspan="4">หน้าจอบันทึกแบบ ภ.พ.01.3</td>
+                    </tr>
+                    <tr>
+                        <th id="markId" rowspan="1"> 
+                            <input id="ck1" class="checkbox-custom" name="checkbox" type="checkbox">
+                        </th>
+                        <td>VPP0130406</td>
+                        <td class="text-left" colspan="4">หน้าจอบันทึกแจ้งต่อสิทธิสมาชิกสมาคม</td>
+                    </tr>
+                    <tr>
+                        <th id="markId" rowspan="1"> 
+                            <input id="ck1" class="checkbox-custom" name="checkbox" type="checkbox">
+                        </th>
+                        <td>VPP0130409</td>
+                        <td class="text-left" colspan="4">หน้าจอบันทึกการโอนสถานประกอบการ</td>
+                    </tr>
+                    <tr>
+                        <th id="markId" rowspan="1"> 
+                            <input id="ck1" class="checkbox-custom" name="checkbox" type="checkbox">
+                        </th>
+                        <td>VPP0130411</td>
+                        <td class="text-left" colspan="4">หน้าจอบันทึกรับโอนสถานประกอบการ</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td colspan="4" rowspan="1" scope="row" style="text-align: left">
+                            จำนวนทั้งหมด
+                            <span class="bodybold">4</span>
+                            รายการ
+                        </td>
+                        <td colspan="5" style="text-align: right">
+                            <ul class="pagination pagination-sm pagination-table">
+                                <li class="page-item">
+                                    <a class="page-link">
+                                        <i class="icon-previous1"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link"> 1 </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link"> 2 </a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link"> 3 </a>
+                                </li>
+                                <div class="point">...</div>
+                                <li class="page-item">
+                                    <a class="page-link"> 5 </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link">
+                                        <i class="icon-next1"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>

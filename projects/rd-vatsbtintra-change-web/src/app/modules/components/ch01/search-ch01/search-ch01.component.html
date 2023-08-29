@@ -1,0 +1,139 @@
+<!-- <div class="col-12 p-4 mb-5 ml-auto bluelight-bg"> -->
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade active show" id="#" role="tabpanel" aria-labelledby="#">
+        <div class="p-1">
+            <div class="tab-content mb-3" id="myTabContent">
+                <form [formGroup]="formGroup" class="form-search">
+                    <div class="topic navy line-b mt-2 mb-3">
+                        <div class="title mb-2"> <svg class="svg-inline--fa fa-filter fa-w-16" aria-hidden="true"
+                                data-prefix="fas" data-icon="filter" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z">
+                                </path>
+                            </svg>เงื่อนไขการค้นหา</div>
+                    </div>
+                    <div class="w-80 pt-3 m-auto">
+                        <div class="form-group row">
+                            <div class="col-3 text-right" style="margin-top: 0.4rem;">
+                                <label>เลขประจำตัวผู้เสียภาษีอากร</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <input class="form-control" mask="0-0000-00000-00-0" formControlName="nid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-right" style="margin-top: 0.4rem;"><label>สถานะ</label></div>
+                            <div class="col-3">
+                                <ng-select [clearable]="true" [items]="listStatus" bindLabel="name" bindValue="value"
+                                    [markFirst]="false" formControlName="searchStatus" dropdownPosition="auto">
+                                </ng-select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-primary mr-3" (click)="getSearch()">
+                            ค้นหา
+                        </button>
+                        <button *ngIf="appr=='n'" type="button" class="btn btn-primary mr-3" (click)="create()">
+                            สร้างแบบ
+                        </button>
+                        <button type="button" class="btn btn-light" (click)="clear()">
+                            ล้างข้อความ
+                        </button>
+                    </div>
+                </form>
+                <div class="title p-2">ผลการค้นหาพบ {{listOfData.length}} รายการ</div>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr class="text-center">
+                            <th>ลำดับที่</th>
+                            <th>วันที่สร้าง</th>
+                            <th>ชื่อผู้ประกอบการ</th>
+                            <th>ห้องเลขที่</th>
+                            <th>รหัสไปรษณีย์</th>
+                            <th>เลขประจำตัวผู้เสียภาษีอากรใหม่</th>
+                            <th>สถานะ</th>
+                            <th>ดำเนินการ</th>
+                            <th>พิมพ์แบบ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of listOfData;let i = index" class="text-center">
+                            <th scope="row" class="text-center">1</th>
+                            <td>{{getFormatDate(data.createDat)}}</td>
+                            <td>{{data.oldFullName}}</td>
+                            <td>{{data.roomNo}}</td>
+                            <td>{{data.posCod}}</td>
+                            <td>{{data.nid}}</td>
+                            <td>{{data.disForSta}}</td>
+                            <td><a><span class="material-icons-outlined icon-bg"
+                                        (click)="createCh01('C', data)">edit</span></a></td>
+                            <td><a><span class="material-icons-outlined icon-bg">print</span></a></td>
+                        </tr>
+                        <tr class="bg-white">
+                            <th colspan="4" rowspan="1" scope="row" style="text-align:left">แสดงทั้งหมด <span
+                                    class="bodybold">10</span> รายการ</th>
+                            <td colspan="5" style="text-align: right;">
+                                <ul class="pagination pagination-sm pagination-table">
+                                    <li class="page-item">
+                                        <a class="page-link">
+                                            <i class="icon-previous1"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link">
+                                            3
+                                        </a>
+                                    </li>
+                                    <div class="point">...</div>
+                                    <li class="page-item">
+                                        <a class="page-link">
+                                            5
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link">
+                                            <i class="icon-next1"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </div> -->
+
+<div class="modal" bsModal #modalSave="bs-modal" [config]="{backdrop: 'static', keyboard: false}" tabindex="-1"
+    role="dialog" aria-labelledby="dialog-static-name">
+    <div class="centered col-6 w-80 pt-7 m-auto">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="form-group row justify-content-center">
+                    {{mas}}
+                </div>
+                <div class="row justify-content-center">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary mr-2" (click)="modalSave.hide()">ตกลง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

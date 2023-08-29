@@ -1,0 +1,92 @@
+<h3 class="mb-3 navy">บันทึกแบบคำขอ</h3>
+<div class="container-fluid pl-0 pr-0 intra-tab">
+    <!-- nav-tabs -->
+    <ul class="nav nav-tabs align-items-end" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Tab11" role="tab" aria-controls="home"
+                aria-selected="true">สร้างแบบใหม่</a>
+        </li>
+        <!--<li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Tab21" role="tab" aria-controls="profile"
+                aria-selected="false">แบบร่าง</a>
+        </li>
+        <li class="nav-item mr-auto" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#Tab31" role="tab" aria-controls="contact"
+                aria-selected="false">แบบที่สร้างเสร็จ</a>
+        </li>-->
+    </ul>
+</div>
+<!-- Content -->
+<div class="card-intratab tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="Tab11" role="tabpanel" aria-labelledby="home-tab">
+        <div class="topic navy line-b mt-2 mb-3">
+            <h4>แบบแจ้งการเปลี่ยนแปลงแก้ไขโดยเจ้าหน้าที่</h4>
+        </div>
+        <div class="pl-5">
+            <div class="body2 mb-2">ขอแก้ไขฐานข้อมูล</div>
+            <ul class="link-lineheight">
+                <!--<li><a routerLink="/cd01/search"  routerLinkActive="active" ariaCurrentWhenActive="page">ปผ.02 - โอนแบบแสดงรายการ</a></li>-->
+                <li><a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'rp01&appr=n', progName: 'ป.ผ.02 - แบบคำขอโอนรายการบัญชี', rootUrl: '/request-form'}" routerLinkActive="active" ariaCurrentWhenActive="page">ป.ผ.02 - โอนแบบแสดงรายการ</a></li>
+                <li><a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'cd01&appr=n', progName: 'ป.ผ.03 - เปลี่ยนชื่อสถานประกอบการ', rootUrl: '/request-form'}" routerLinkActive="active" ariaCurrentWhenActive="page">ป.ผ.03 - เปลี่ยนชื่อสถานประกอบการ </a></li>
+                <!-- <li><a routerLink="/ext-app" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="onClickA($event, '/ext-app', url + 'rd-vatsbtintra-change-web', 'cd01', 'ปผ.03 - เปลี่ยนชื่อสถานประกอบการ')">ปผ.03 - เปลี่ยนชื่อสถานประกอบการ </a></li> -->
+                <li><a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'ch01&appr=n', progName: 'ป.ผ.04 - เปลี่ยนเลขประจำตัวผู้เสียภาษีอากร', rootUrl: '/request-form'}" routerLinkActive="active" ariaCurrentWhenActive="page">ป.ผ.04 - เปลี่ยนเลขประจำตัวผู้เสียภาษีอากร</a></li>
+                <li><a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'dt01&appr=n', progName: 'ป.ผ.05 - ลบข้อมูลผู้เสียภาษีอากร', rootUrl: '/request-form'}" routerLinkActive="active" ariaCurrentWhenActive="page">ป.ผ.05 - ลบข้อมูลผู้เสียภาษีอากร </a></li>
+            </ul>
+        </div>
+        <!--<div class="pl-5">
+            <div class="body2 mb-2">เพิกถอน ยกเลิกเพิกถอน ขีดชื่อผู้ประกอบการ ผู้ประกอบการ</div>
+            <ul class="link-lineheight">
+                <li><a href="#">ภ.พ.77 - เพิกถอน</a></li>
+                <li><a href="#">ภ.พ.78 - ยกเลิกเพิกถอน</a></li>
+                <li><a href="#">ภ.พ.79 - ขีดชื่อผู้ประกอบการ</a></li>
+            </ul>
+        </div>
+        <div class="topic navy line-b mt-2 mb-3">
+            <h4>ระบบงานย่อย</h4>
+        </div>
+        <div class="pl-5">
+            <div class="body2 mb-2">ระบบงานอนุมัติค้าทองคำ</div>
+            <ul class="link-lineheight">
+                <li><a href="#">ภ.พ.01.3 - ขออนุมัติกิจการค้าทองคำ</a></li>
+            </ul>
+        </div>
+        <div class="pl-5">
+            <div class="body2 mb-2">ระบบงานกิจการน้ำมันเชื้อเพลิงรายย่อย</div>
+            <ul class="link-lineheight">
+                <li><a href="#">ภ.พ.07 - ขออนุมัติกิจการน้ำมันเชื้อเพลิงรายย่อย</a></li>
+                <li><a href="#">ช.พ. 05 - Lorem</a></li>
+            </ul>
+        </div>
+        <div class="pl-5">
+            <div class="body2 mb-2">ระบบงานกิจการ Sotfware house</div>
+            <ul class="link-lineheight">
+                <li><a href="#">ภ.พ.06 - ขออนุมัติใช้เครื่องบันทึกการเก็บเงิน</a></li>
+            </ul>
+        </div>
+        <div class="pl-5">
+            <div class="body2 mb-2">ระบบงานกิจการธุรกิจส่งออก</div>
+            <ul class="link-lineheight">
+                <li><a href="#">ภ.พ.06 - ขออนุมัติใช้เครื่องบันทึกการเก็บเงิน</a></li>
+                <li><a href="#">ภ.พ.06.1 - เปลี่ยนแปลงการใช้เครื่องบันทึกการเก็บเงินที่เคยได้รับอนุมัต</a></li>
+            </ul>
+        </div>
+        <div class="pl-5">
+            <div class="body2 mb-2">ระบบงานผูกบัญชีธนาคาร</div>
+            <ul class="link-lineheight">
+                <li><a href="#">ภ.พ.13 - ขอยื่นผูกบัญชีธนาคารที่รับคืนภาษี</a></li>
+            </ul>
+        </div>
+        <div class="pl-5">
+            <div class="body2 mb-2">การออกหนังสือแจ้งการประเมินฯ แจ้งคืน โดยเจ้าหน้าที่</div>
+            <ul class="link-lineheight">
+                <li><a href="#">PP73.1 - Lorem</a></li>
+                <li><a href="#">PP72.1 - Lorem</a></li>
+                <li><a href="#">PT73.1 - Lorem</a></li>
+            </ul>
+        </div>-->
+    </div>
+    <div class="tab-pane fade" id="Tab21" role="tabpanel" aria-labelledby="profile-tab">2</div>
+    <div class="tab-pane fade" id="Tab31" role="tabpanel" aria-labelledby="contact-tab">3</div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

@@ -1,0 +1,50 @@
+<div class="tab-pane fade active show" id="#" role="tabpanel" aria-labelledby="#">
+    <h3 class="mb-2 navy">พิจารณาแบบแจ้งการเปลี่ยนแปลงแก้ไขโดยเจ้าหน้าที่</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">แบบแจ้งการเปลี่ยนแปลงแก้ไขโดยเจ้าหน้าที่</li>
+        </ol>
+    </nav>
+    <div class="card p-4 mt-4 mb-5">
+        <!-- Content -->
+        <div class="tab-content mb-3" id="myTabContent">
+            <div class="list-group rounded-0">
+                <a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'rp01&appr=y', progName: 'ป.ผ.02 - แบบคำขอโอนรายการบัญชี', rootUrl: '/consider-request/changes-by-staff'}" routerLinkActive="active" ariaCurrentWhenActive="page" class="list-group-item list-group-item-action">
+                    <div class="row form-row">
+                        <div class="col-6">แบบคำขอโอนรายการบัญชี</div>
+                        <div class="col-3">ป.ผ.02</div>
+                        <div class="col-2"></div>
+                        <div class="col-1"><span class="material-icons-outlined float-right">chevron_right</span></div>
+                    </div>
+                </a>
+
+                <a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'cd01&appr=y', progName: 'ปผ.03 - เปลี่ยนชื่อสถานประกอบการ', rootUrl: '/consider-request/changes-by-staff'}" routerLinkActive="active" ariaCurrentWhenActive="page" class="list-group-item list-group-item-action">
+                    <div class="row form-row">
+                        <div class="col-6">เปลี่ยนชื่อสถานประกอบการ</div>
+                        <div class="col-3">ป.ผ.03</div>
+                        <div class="col-2"></div>
+                        <div class="col-1"><span class="material-icons-outlined float-right">chevron_right</span></div>
+                    </div>
+                </a>
+
+                <a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'ch01&appr=y', progName: 'ปผ.04 - เปลี่ยนเลขประจำตัวผู้เสียภาษีอากร', rootUrl: '/consider-request/changes-by-staff'}" routerLinkActive="active" ariaCurrentWhenActive="page" class="list-group-item list-group-item-action">
+                    <div class="row form-row">
+                        <div class="col-6">เปลี่ยนเลขประจำตัวผู้เสียภาษีอากร</div>
+                        <div class="col-3">ป.ผ.04</div>
+                        <div class="col-2"></div>
+                        <div class="col-1"><span class="material-icons-outlined float-right">chevron_right</span></div>
+                    </div>
+                </a>
+
+                <a routerLink="/ext-app" [queryParams]="{ extUrl: url + 'rd-vatsbtintra-change-web', form: 'dt01&appr=y', progName: 'ปผ.05 - ลบข้อมูลผู้เสียภาษีอากร', rootUrl: '/consider-request/changes-by-staff'}" routerLinkActive="active" ariaCurrentWhenActive="page" class="list-group-item list-group-item-action">
+                    <div class="row form-row">
+                        <div class="col-6">ลบข้อมูลผู้เสียภาษีอากร</div>
+                        <div class="col-3">ป.ผ.05</div>
+                        <div class="col-2"></div>
+                        <div class="col-1"><span class="material-icons-outlined float-right">chevron_right</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

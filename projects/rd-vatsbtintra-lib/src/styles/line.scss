@@ -1,0 +1,47 @@
+@import "./colors.scss";
+.line-r{
+    border-right: 1px solid $border-color;
+}
+.line-r.dot{
+    border-right-style: dotted;
+}
+.line-l{
+    border-left: 1px solid $border-color;
+}
+.line-l.dot{
+    border-left-style: dotted;
+}
+.line-t{
+    border-top: 1px solid $border-color;
+}
+.line-t.dot{
+    border-top-style: dotted;
+}
+.line-b{
+    border-bottom: 1px solid $border-color;
+}
+.line-b.dot{
+    border-bottom-style: dotted;
+}
+.border{
+    border: 1px solid $border-color !important;
+}
+.border.dot{
+    border-style: dotted !important;
+}
+.border-none{
+    border: none !important;
+}
+
+.border2 {
+    border: 1px solid rgb(204 204 204 / 38%) !important;
+}
+
+.box-line{
+    width: 200px;
+    height: 100px;
+    background: $grayfade-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

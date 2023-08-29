@@ -1,0 +1,64 @@
+@import "./colors.scss";
+
+.btn-footer{
+    display: flex;
+}
+.btn-light{
+    background-color: $graylight-color;
+    border-color: $graylight-color;
+    color: $main-color;
+}
+.btn-light:hover,.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle,
+.btn-light.focus, .btn-light:focus{
+    background-color: $border-color;
+    border-color: $border-color;
+    color: $main-color;
+}
+.btn-primary {
+    background-color:$main-color;
+    border-color: $main-color;
+}
+
+.btn-primary:hover,.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle,
+.btn-primary.focus, .btn-primary:focus{
+    background-color: #08182B;
+    border-color: #08182B;
+}
+
+.btn-outline-light {
+    color: $main-color !important;
+    border-color: $main-color !important;
+    background: #f8f9fa;;
+}
+
+.btn-icon {
+  vertical-align: middle;
+    position: relative;
+    top: -2px;
+    font-size: 22px !important;
+}
+
+.btn-primary.disabled, .btn-light:disabled {
+    color: $white-color;
+    background-color:#CCCCCC;
+    border-color: #CCCCCC;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: $main-color;
+    border-color: $main-color;
+}
+
+.btn-link{
+  color: $bluelink;
+}
+
+
+.btn-outline-secondary{
+  border-color: $main-color;
+  color: $main-color;
+  background: #f8f9fa;
+}

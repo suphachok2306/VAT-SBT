@@ -1,0 +1,133 @@
+@import "./colors.scss";
+
+  @font-face {
+    font-family: 'NotoSansThaiBold';
+    src: url('../assets/font/NotoSansThai-Bold.eot');
+    src: url('../assets/font/NotoSansThai-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/NotoSansThai-Bold.woff2') format('woff2'),
+        url('../assets/font/NotoSansThai-Bold.woff') format('woff'),
+        url('../assets/font/NotoSansThai-Bold.ttf') format('truetype'),
+        url('../assets/font/NotoSansThai-Bold.svg#NotoSansThai-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'NotoSansBold';
+    src: url('../assets/font/NotoSans-Bold.eot');
+    src: url('../assets/font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/NotoSans-Bold.woff2') format('woff2'),
+        url('../assets/font/NotoSans-Bold.woff') format('woff'),
+        url('../assets/font/NotoSans-Bold.ttf') format('truetype'),
+        url('../assets/font/NotoSans-Bold.svg#NotoSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+  @font-face {
+    font-family: 'SarabunBold';
+    src: url('../assets/font/Sarabun-SemiBold.eot');
+    src: url('../assets/font/Sarabun-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Sarabun-SemiBold.woff2') format('woff2'),
+        url('../assets/font/Sarabun-SemiBold.woff') format('woff'),
+        url('../assets/font/Sarabun-SemiBold.ttf') format('truetype'),
+        url('../assets/font/Sarabun-SemiBold.svg#Sarabun-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+  @font-face {
+    font-family: 'SarabunRegular';
+    src: url('../assets/font/Sarabun-Regular.eot');
+    src: url('../assets/font/Sarabun-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Sarabun-Regular.woff2') format('woff2'),
+        url('../assets/font/Sarabun-Regular.woff') format('woff'),
+        url('../assets/font/Sarabun-Regular.ttf') format('truetype'),
+        url('../assets/font/Sarabun-Regular.svg#Sarabun-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@mixin NotoSansBold {
+    font-family: NotoSansBold, NotoSansThaiBold;
+}
+@mixin SarabunBold {
+  font-family: SarabunBold;
+}
+@mixin SarabunRegular {
+  font-family: SarabunRegular;
+}
+
+.lead{
+  @include NotoSansBold;
+  font-size: 48px;
+  line-height: 62px;
+}
+.h1,h1{
+    @include NotoSansBold;
+    font-size: 32px;
+    line-height: 40px;
+}
+.h2,h2{
+  @include NotoSansBold;
+  font-size: 28px;
+  line-height: 36px;
+}
+.h3,h3{
+  @include NotoSansBold;
+  font-size: 24px;
+  line-height: 28px;
+}
+.h4,h4{
+  @include NotoSansBold;
+  font-size: 20px;
+  line-height: 28px;
+}
+.title{
+  @include SarabunBold;
+  font-size: 18px;
+  line-height: 26px;
+}
+.body,body,p{
+  @include SarabunRegular;
+  font-size: 16px;
+  line-height: 24px;
+}
+.body2{
+  font-size: 18px;
+}
+p{
+  margin: 0;
+}
+.bodybold{
+  @include SarabunBold;
+  font-size: 16px;
+  line-height: 24px;
+}
+small,.small{
+  @include SarabunRegular;
+  font-size: 14px;
+  line-height: 20px;
+}
+.smallbold{
+  @include SarabunBold;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+a {
+    color: $bluelink;
+}
+
+.link-lineheight{
+  line-height:40px;
+}

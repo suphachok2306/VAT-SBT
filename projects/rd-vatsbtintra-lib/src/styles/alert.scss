@@ -1,0 +1,58 @@
+.alert{
+    border: solid 1px rgb(0 0 0 / 7%);
+    .material-icons-outlined,.material-icons{
+        margin-right: 10px;
+    }
+}
+
+.alert.fit{
+    width: fit-content;
+}
+.alert.blue{
+    background-color: $bluelight-color;
+    p{
+        color: $dark-color;
+    }
+}
+
+.alert.red{
+    background-color: $red-fade-color;
+    p{
+        color: $red-color;
+    }
+
+}
+
+.alert.gray{
+    background-color: $graylight-color;
+    p{
+        color: $dark-color;
+    }
+
+}
+.alert.green{
+    background-color: $green-fade-color;
+    p{
+        color: $dark-color;
+    }
+
+}
+.alert.yellow{
+    background-color: $yellow-fade-color;
+    p{
+        color: $dark-color;
+    }
+
+}
+
+.status{
+  .alert-warning {
+    background-color: $yellow-color;
+    border-color: none;
+    display: inline-block;
+    border-radius: 100px;
+    color: $main-color;
+    padding: 0.4rem 1.25rem;
+    margin-bottom: 0;
+  }
+}

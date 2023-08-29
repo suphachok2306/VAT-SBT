@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="mb-5">
+    <div class="mt-4 mb-5">
+      <app-taxpayer-info [taxpayerInfo]="taxpayerInfo"></app-taxpayer-info>
+      <br>
+      <app-taxpayer-address [taxpayerAddress]="taxpayerAddress"></app-taxpayer-address>
+      <br>
+      <div class="box-content">
+        <div class="topic line-b mb-4">
+          <h4 class="navy">ข้อมูลการโอน</h4>
+        </div>
+        <div class="form-group row align-items-center">
+          <div class="col-3">
+            <label>หนังสือเลขที่<span class="red">*</span></label>
+            <input class="form-control">
+          </div>
+
+          <div class="col-3">
+            <label>ลงวันที่</label>
+            <div class="form-icon">
+              <i class="material-icons-outlined right">calendar_today</i>
+              <input class="form-control" type="text" placeholder="วัน/เดือน/ปี">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row align-items-center">
+          <div class="col-3">
+            <label>สท. เดิมที่รับผิดชอบ</label>
+            <p>สำนักงานสรรพากรพื้นที่กรุงเทพมหานคร 1</p>
+          </div>
+        </div>
+        <div class="form-group row align-items-center">
+          <div class="col-3">
+            <label>สท. ใหม่ที่รับผิดชอบ</label>
+            <select class="custom-select">
+              <option selected="">เลือกสท. ใหม่ที่รับผิดชอบ</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row align-items-center">
+          <div class="col-3">
+            <label>สาเหตุการโอน</label>
+            <select class="custom-select">
+              <option selected="">เลือกสาเหตุการโอน</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid p-3 line-t">
+  <div class="container btn-footer">
+    <button type="button" class="btn btn-light mr-auto" style="min-width: 100px;" (click)="goBack()">ย้อนกลับ</button>
+    <button type="button" class="btn btn-primary" style="min-width: 100px;">ยืนยันการโอน</button>
+  </div>
+</div>

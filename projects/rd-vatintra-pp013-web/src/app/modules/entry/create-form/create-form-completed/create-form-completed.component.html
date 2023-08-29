@@ -1,0 +1,54 @@
+<div class="form-report">
+  <div class="container">
+    <div class="box-content text-center pt-5">
+      <span class="material-icons green" style="font-size:50px;">check_circle</span>
+      <h2 class="navy">คำขอได้ถูกบันทึกลงระบบ<br>และรอบันทึกผลการพิจารณา</h2>
+    </div>
+    <div class="modal-dialog modal-lg card p-4 mt-4 border">
+      <div class="modal-content border-none m-auto">
+        <div class="modal-body py-0">
+          <form>
+            <div class="row">
+              <label class="col-4 col-form-label">ชื่อบริษัท:</label>
+              <div class="col-6">
+                <p class="form-control-plaintext">บริษัท อินทราเซรามิคจำกัด</p>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-4 col-form-label">เลขประจำตัวผู้เสียภาษี:</label>
+              <div class="col-6">
+                <p class="form-control-plaintext bodybold">0-9932-83891-72-0</p>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-4 col-form-label">อีเมลที่ใช้ติดต่อ:</label>
+              <div class="col-6">
+                <p class="form-control-plaintext">sommai@veecorp.com</p>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-4 col-form-label">วันที่สมัคร:</label>
+              <div class="col-6">
+                <p class="form-control-plaintext">3 มีนาคม 2565</p>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-4 col-form-label">สถานะ:</label>
+              <div class="col-6">
+                <p class="form-control-plaintext">รอเจ้าหน้าที่พิจารณา</p>
+              </div>
+            </div>
+          </form>
+
+          <div class="btn-footer mt-4 mb-2">
+            <button type="button" class="btn btn-primary mr-3"><span
+                class="material-icons-outlined btn-icon">file_download</span> ดาวน์โหลด/พิมพ์แบบ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-footer my-5 justify-content-center">
+      <button type="button" class="btn btn-light" [routerLink]="['/']" >ดูคำร้องขอที่สร้างเสร็จ</button>
+    </div>
+  </div>
+</div>

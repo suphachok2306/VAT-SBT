@@ -1,0 +1,20 @@
+<h3 class="mb-2 navy">{{headerName[1]}}</h3>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#" (click)="onClickA($event)">บันทึกแบบคำขอ</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{progName}}</li>
+    </ol>
+</nav>
+<div class="embed-responsive embed-responsive-1by1">
+    <iframe
+    id="iframe-page" [src]='extURL()'
+    class="embed-responsive-item"></iframe>
+</div>
+
+<!-- <div class="container" [innerHTML]="innerHtml | safe: 'html'">
+    <iframe id="iframe-page" class="responsive-iframe" src="https://vsdataentry.pccth.com/rd-sso-login-web/"></iframe>
+</div> -->
+
+<!-- <div class="embed-container" [innerHTML]="innerHtml | safe: 'html'"></div> -->

@@ -1,0 +1,44 @@
+import { OnInit, ElementRef } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
+import * as i0 from "@angular/core";
+export declare class NumberFormatDirective implements ControlValueAccessor, OnInit {
+    private el;
+    private document;
+    isZero: boolean;
+    private _oldValueForDetectChange;
+    private _oldValue;
+    private _displayValue;
+    private _max;
+    private _decimal;
+    private _format;
+    private _formElement;
+    private _specialKeys;
+    private _regExNumber;
+    private _regExNumberAndDecimal;
+    private _oldSelectionStart;
+    private _detectDelete;
+    private _detectBackspace;
+    private _regExNumberNotZero;
+    onChange: (_: any) => void;
+    onTouch: () => void;
+    constructor(el: ElementRef, document: any);
+    ngOnInit(): void;
+    set initialize(_value: string);
+    onKeyDown(event: KeyboardEvent): void;
+    onClick(event: any): void;
+    onInput(event: any): void;
+    onBlur(event: any): void;
+    private detectIOS;
+    processCursorPosition(_oldValue: string, _oldSelectionStart: number, _newValue: string): void;
+    setCursorAt(position: number): void;
+    writeValue(value: any): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState?(value: boolean): void;
+    private onValueChange;
+    private removeLeadingZero;
+    private getRegEx;
+    static ɵfac: i0.ɵɵFactoryDef<NumberFormatDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<NumberFormatDirective, "[libNumberFormat]", never, { "isZero": "isZero"; "initialize": "libNumberFormat"; }, {}, never>;
+}
+//# sourceMappingURL=number-format.directive.d.ts.map

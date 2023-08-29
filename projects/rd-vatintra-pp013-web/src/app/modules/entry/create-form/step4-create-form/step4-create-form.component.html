@@ -1,0 +1,14 @@
+<div class="container">
+  <app-taxpayer-info [taxpayerInfo]="taxpayerInfo"></app-taxpayer-info>
+  <br>
+  <app-taxpayer-address [taxpayerAddress]="taxpayerAddress"></app-taxpayer-address>
+  <br>
+  <app-taxpayer-property [taxpayerProperty]="taxpayerProperty"></app-taxpayer-property>
+</div>
+
+<div class="container-fluid p-3 line-t mt-5">
+  <div class="container btn-footer">
+    <button type="button" class="btn btn-light mr-auto" style="min-width: 100px;" (click)="goBack()">ย้อนกลับ</button>
+    <button type="button" class="btn btn-primary" style="min-width: 100px;" (click)="goNext()">ต่อไป</button>
+  </div>
+</div>

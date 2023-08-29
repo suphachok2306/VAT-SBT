@@ -1,0 +1,805 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "22bc2a0f-911e-45c0-8858-bb88b8a461bd"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "rd-vatsbtintra-web": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/rd-vatsbtintra-web-demo",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/rd-vatsbtintra-lib/src/assets",
+                "output": "lib-assets"
+              }
+            ],
+            "styles": [
+              "projects/rd-vatsbtintra-lib/src/styles/font-awesome.css",
+              "projects/rd-vatsbtintra-lib/src/styles/fontawesome-svg.css",
+              "projects/rd-vatsbtintra-lib/src/styles/material-icons.css",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.css",
+              "projects/rd-vatsbtintra-dashboard-web/src/styles.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/buttons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/colors.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/font.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/form.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/icons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/line.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/modal.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/progress.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/shadow.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/sidemenu.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/table.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/tabs.scss"
+            ],
+            "scripts": [
+              "projects/rd-vatsbtintra-lib/src/js/w3.js",
+              "projects/rd-vatsbtintra-lib/src/js/bootstrap.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/jquery.slim.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/popper.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/fontawesome-all.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/others.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "rd-vatsbtintra-web-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "rd-vatsbtintra-web-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "rd-vatsbtintra-web-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "rd-vatsbtintra-web-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "rd-vatsbtintra-web-demo:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "rd-vatsbtintra-lib": {
+      "projectType": "library",
+      "root": "projects/rd-vatsbtintra-lib",
+      "sourceRoot": "projects/rd-vatsbtintra-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rd-vatsbtintra-lib/tsconfig.lib.json",
+            "project": "projects/rd-vatsbtintra-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rd-vatsbtintra-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rd-vatsbtintra-lib/src/test.ts",
+            "tsConfig": "projects/rd-vatsbtintra-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/rd-vatsbtintra-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rd-vatsbtintra-lib/tsconfig.lib.json",
+              "projects/rd-vatsbtintra-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "rd-vatsbtintra-dashboard-web": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/rd-vatsbtintra-dashboard-web",
+      "sourceRoot": "projects/rd-vatsbtintra-dashboard-web/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/rd-vatsbtintra-dashboard-web",
+            "index": "projects/rd-vatsbtintra-dashboard-web/src/index.html",
+            "main": "projects/rd-vatsbtintra-dashboard-web/src/main.ts",
+            "polyfills": "projects/rd-vatsbtintra-dashboard-web/src/polyfills.ts",
+            "tsConfig": "projects/rd-vatsbtintra-dashboard-web/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/rd-vatsbtintra-dashboard-web/src/favicon.ico",
+              "projects/rd-vatsbtintra-dashboard-web/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/rd-vatsbtintra-lib/src/assets",
+                "output": "lib-assets"
+              }
+            ],
+            "styles": [
+              "projects/rd-vatsbtintra-lib/src/styles/font-awesome.css",
+              "projects/rd-vatsbtintra-lib/src/styles/fontawesome-svg.css",
+              "projects/rd-vatsbtintra-lib/src/styles/material-icons.css",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.css",
+              "projects/rd-vatsbtintra-dashboard-web/src/styles.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/buttons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/colors.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/font.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/form.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/icons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/line.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/modal.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/progress.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/shadow.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/sidemenu.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/table.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/tabs.scss"
+            ],
+            "scripts": [
+              "projects/rd-vatsbtintra-lib/src/js/w3.js",
+              "projects/rd-vatsbtintra-lib/src/js/bootstrap.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/jquery.slim.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/popper.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/fontawesome-all.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/others.js"
+            ]
+          },
+          "configurations": {
+            "sit": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatsbtintra-dashboard-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatsbtintra-dashboard-web/src/environments/environment.sit.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            },
+            "uat": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatsbtintra-dashboard-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatsbtintra-dashboard-web/src/environments/environment.uat.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatsbtintra-dashboard-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatsbtintra-dashboard-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "rd-vatsbtintra-dashboard-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "rd-vatsbtintra-dashboard-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "rd-vatsbtintra-dashboard-web:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rd-vatsbtintra-dashboard-web/src/test.ts",
+            "polyfills": "projects/rd-vatsbtintra-dashboard-web/src/polyfills.ts",
+            "tsConfig": "projects/rd-vatsbtintra-dashboard-web/tsconfig.spec.json",
+            "karmaConfig": "projects/rd-vatsbtintra-dashboard-web/karma.conf.js",
+            "assets": [
+              "projects/rd-vatsbtintra-dashboard-web/src/favicon.ico",
+              "projects/rd-vatsbtintra-dashboard-web/src/assets"
+            ],
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rd-vatsbtintra-dashboard-web/tsconfig.app.json",
+              "projects/rd-vatsbtintra-dashboard-web/tsconfig.spec.json",
+              "projects/rd-vatsbtintra-dashboard-web/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/rd-vatsbtintra-dashboard-web/e2e/protractor.conf.js",
+            "devServerTarget": "rd-vatsbtintra-dashboard-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "rd-vatsbtintra-dashboard-web:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "rd-vatsbtintra-change-web": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/rd-vatsbtintra-change-web",
+      "sourceRoot": "projects/rd-vatsbtintra-change-web/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/rd-vatsbtintra-change-web",
+            "index": "projects/rd-vatsbtintra-change-web/src/index.html",
+            "main": "projects/rd-vatsbtintra-change-web/src/main.ts",
+            "polyfills": "projects/rd-vatsbtintra-change-web/src/polyfills.ts",
+            "tsConfig": "projects/rd-vatsbtintra-change-web/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/rd-vatsbtintra-change-web/src/favicon.ico",
+              "projects/rd-vatsbtintra-change-web/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/rd-vatsbtintra-lib/src/assets",
+                "output": "lib-assets"
+              }
+            ],
+            "styles": [
+              "projects/rd-vatsbtintra-lib/src/styles/font-awesome.css",
+              "projects/rd-vatsbtintra-lib/src/styles/fontawesome-svg.css",
+              "projects/rd-vatsbtintra-lib/src/styles/material-icons.css",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.css",
+              "node_modules/@ng-select/ng-select/themes/default.theme.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/rd-vatsbtintra-dashboard-web/src/styles.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/buttons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/colors.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/font.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/form.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/icons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/line.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/modal.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/progress.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/shadow.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/sidemenu.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/table.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/tabs.scss"
+            ],
+            "scripts": [
+              "projects/rd-vatsbtintra-lib/src/js/w3.js",
+              "projects/rd-vatsbtintra-lib/src/js/bootstrap.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/jquery.slim.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/popper.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/fontawesome-all.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/others.js"
+            ]
+          },
+          "configurations": {
+            "production-rdvc": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatsbtintra-change-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatsbtintra-change-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            },
+            "sit-rdvc": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatsbtintra-change-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatsbtintra-change-web/src/environments/environment.sit.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            },
+            "uat-rdvc": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatsbtintra-change-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatsbtintra-change-web/src/environments/environment.uat.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "rd-vatsbtintra-change-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "rd-vatsbtintra-change-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "rd-vatsbtintra-change-web:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rd-vatsbtintra-change-web/src/test.ts",
+            "polyfills": "projects/rd-vatsbtintra-change-web/src/polyfills.ts",
+            "tsConfig": "projects/rd-vatsbtintra-change-web/tsconfig.spec.json",
+            "karmaConfig": "projects/rd-vatsbtintra-change-web/karma.conf.js",
+            "assets": [
+              "projects/rd-vatsbtintra-change-web/src/favicon.ico",
+              "projects/rd-vatsbtintra-change-web/src/assets"
+            ],
+            "styles": ["projects/rd-vatsbtintra-change-web/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rd-vatsbtintra-change-web/tsconfig.app.json",
+              "projects/rd-vatsbtintra-change-web/tsconfig.spec.json",
+              "projects/rd-vatsbtintra-change-web/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/rd-vatsbtintra-change-web/e2e/protractor.conf.js",
+            "devServerTarget": "rd-vatsbtintra-change-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "rd-vatsbtintra-change-web:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "rd-vatintra-pp013-web": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/rd-vatintra-pp013-web",
+      "sourceRoot": "projects/rd-vatintra-pp013-web/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/rd-vatintra-pp013-web",
+            "index": "projects/rd-vatintra-pp013-web/src/index.html",
+            "main": "projects/rd-vatintra-pp013-web/src/main.ts",
+            "polyfills": "projects/rd-vatintra-pp013-web/src/polyfills.ts",
+            "tsConfig": "projects/rd-vatintra-pp013-web/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/rd-vatintra-pp013-web/src/favicon.ico",
+              "projects/rd-vatintra-pp013-web/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/rd-vatsbtintra-lib/src/assets",
+                "output": "lib-assets"
+              }
+            ],
+            "styles": [
+              "projects/rd-vatintra-pp013-web/src/styles.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/font-awesome.css",
+              "projects/rd-vatsbtintra-lib/src/styles/fontawesome-svg.css",
+              "projects/rd-vatsbtintra-lib/src/styles/material-icons.css",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.css",
+              "projects/rd-vatsbtintra-lib/src/styles/buttons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/colors.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/font.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/form.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/icons.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/line.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/modal.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/overide.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/progress.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/shadow.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/sidemenu.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/table.scss",
+              "projects/rd-vatsbtintra-lib/src/styles/tabs.scss"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/w3.js",
+              "projects/rd-vatsbtintra-lib/src/js/bootstrap.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/jquery.slim.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/popper.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/fontawesome-all.min.js",
+              "projects/rd-vatsbtintra-lib/src/js/others.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatintra-pp013-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatintra-pp013-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "uat": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatintra-pp013-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatintra-pp013-web/src/environments/environment.uat.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            },
+            "sit": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/rd-vatintra-pp013-web/src/environments/environment.ts",
+                  "with": "projects/rd-vatintra-pp013-web/src/environments/environment.sit.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "rd-vatintra-pp013-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "rd-vatintra-pp013-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "rd-vatintra-pp013-web:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rd-vatintra-pp013-web/src/test.ts",
+            "polyfills": "projects/rd-vatintra-pp013-web/src/polyfills.ts",
+            "tsConfig": "projects/rd-vatintra-pp013-web/tsconfig.spec.json",
+            "karmaConfig": "projects/rd-vatintra-pp013-web/karma.conf.js",
+            "assets": [
+              "projects/rd-vatintra-pp013-web/src/favicon.ico",
+              "projects/rd-vatintra-pp013-web/src/assets"
+            ],
+            "styles": ["projects/rd-vatintra-pp013-web/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rd-vatintra-pp013-web/tsconfig.app.json",
+              "projects/rd-vatintra-pp013-web/tsconfig.spec.json",
+              "projects/rd-vatintra-pp013-web/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/rd-vatintra-pp013-web/e2e/protractor.conf.js",
+            "devServerTarget": "rd-vatintra-pp013-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "rd-vatintra-pp013-web:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "rd-vatsbtintra-web-demo"
+}

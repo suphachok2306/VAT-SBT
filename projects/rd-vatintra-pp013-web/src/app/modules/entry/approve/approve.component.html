@@ -1,0 +1,20 @@
+<lib-navbar [profileData]="profileData"></lib-navbar>
+
+<div class="app-main" style="top: 88px;">
+  <div class="bluelight-bg px-3">
+    <label class="mt-1 mb-2" [class.mb-5]="!taxPayerName">บันทึกคำขอ / {{titlePage}}</label>
+
+    <div class="container pb-1" *ngIf="taxPayerName">
+      <h2 class="navy">{{taxPayerName}}</h2>
+      <div class="form-group row">
+        <div class="col-auto">
+          <label>สถานะแบบ</label>
+        </div>
+        <div class="col-auto">
+          <p>{{flagStatus}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,94 @@
+<div class="box-content">
+  <div class="topic line-b mb-4">
+    <h4 class="navy">ข้อมูลผู้ประกอบการ</h4>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group row align-items-center">
+        <label class="col-6 col-form-label">เลขทะเบียนผู้รับ</label>
+        <div class="col-6">
+          <p>{{ taxpayerInfo?.recRegNo }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group row align-items-center">
+        <label class="col-3 col-form-label">วันที่รับแบบ</label>
+        <div class="col-6">
+          <p>{{ taxpayerInfo?.recDate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <div class="col-3">
+      <label class="col-form-label">เลขประจำตัวผู้เสียภาษีอากร</label>
+    </div>
+    <div class="col-9">
+      <p>{{ taxpayerInfo?.nid }}</p>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <div class="col-3">
+      <label class="col-form-label">ชื่อสถานประกอบการค้าทองคำ</label>
+    </div>
+    <div class="col-9">
+      <p>{{ taxpayerInfo?.branchName }}</p>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <div class="col-3">
+      <label class="col-form-label">ที่อยู่สำนักงานใหญ่</label>
+    </div>
+    <div class="col-9">
+      <p>{{ taxpayerInfo?.branchAddress }}</p>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <div class="col-3">
+      <label class="col-form-label">โทรศัพท์</label>
+    </div>
+    <div class="col-9">
+      <p>{{ taxpayerInfo?.telNo }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group row align-items-center">
+        <label class="col-6 col-form-label">เลขที่ทะเบียนพานิชย์/ทะเบียนนิติบุคคล</label>
+        <div class="col-6">
+          <p>{{ taxpayerInfo?.corRegNo }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group row align-items-center">
+        <label class="col-3 col-form-label">ลงวันที่</label>
+        <div class="col-6">
+          <p>{{ taxpayerInfo?.corRegDate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group row align-items-center">
+        <label class="col-6 col-form-label">วันที่จดทะเบียนภาษีมูลค่าเพิ่ม</label>
+        <div class="col-6">
+          <p>{{ taxpayerInfo?.vatRegDate }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group row align-items-center">
+        <label class="col-3 col-form-label">มีสาขารวม</label>
+        <div class="col-auto">
+          <p>{{ taxpayerInfo?.branchNum }}</p>
+        </div>
+        <div class="col-auto">
+          <p>สาขา</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

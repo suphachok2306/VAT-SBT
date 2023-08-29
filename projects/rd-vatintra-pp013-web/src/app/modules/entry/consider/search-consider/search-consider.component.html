@@ -1,0 +1,147 @@
+<div class="container">
+  <div class="mb-5">
+    <div class="mt-4 mb-5">
+      <!-- Content -->
+      <div class="tab-content mb-3" id="myTabContent">
+        <form class="form-search pt-2" style="background-color: #FFFFFF;">
+          <div class="topic line-b mt-2 mb-3">
+            <h4 class="navy mb-2">แบบคำขอการประกอบกิจการค้าทองคำ (ภ.พ.01.3)</h4>
+          </div>
+          <div class="form-group row">
+            <div class="col-12">
+              <label class="col-form-label">เงื่อนไขการค้นหา</label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-4">
+              <div class="row">
+                <div class="col-7 offset-5">
+                  <label class="col-form-label">เลขประจำตัวผู้เสียภาษีอากร</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <input class="form-control">
+            </div>
+            <div class="col-1">
+              <label class="col-form-label">สาขา</label>
+            </div>
+            <div class="col-2">
+              <input class="form-control">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-4">
+              <div class="row">
+                <div class="col-7 offset-5">
+                  <label class="col-form-label">ชื่อสถานประกอบการ</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <input class="form-control">
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <button type="button" class="btn btn-primary mr-3">
+              <i class="fa fa-search"></i>&nbsp; ค้นหา
+            </button>
+            <button type="button" class="btn btn-light ">
+              ล้างข้อความ
+            </button>
+          </div>
+        </form>
+        <div class="title p-2">ผลการค้นหาพบ 2 รายการ</div>
+        <table class="table">
+          <thead class="thead-light">
+            <tr class='text-center'>
+              <th>ลำดับ</th>
+              <th>เลขประจำตัวผู้เสียภาษีอากร</th>
+              <th>ชื่อสถานประกอบการ</th>
+              <th>สาขา</th>
+              <th>เลขที่ทะเบียนรับ</th>
+              <th>วันทีรับแบบ</th>
+              <th>สถานะ</th>
+              <th>ดำเนินการ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='text-center'>
+              <th scope="row" class='text-center'>1</th>
+              <td>0-9914-69787-66-8</td>
+              <td class="text-left">บริษัททดสอบ1</td>
+              <td>สำนักงานใหญ่</td>
+              <td>TEST01/2564</td>
+              <td>10/12/2564</td>
+              <td>รอพิจารณา</td>
+              <td><a [routerLink]="['/consider/save']" routerLinkActive="router-link-active"><span
+                    class="material-icons-outlined icon-bg">edit</span></a></td>
+            </tr>
+            <tr class='text-center'>
+              <th scope="row" class='text-center'>2</th>
+              <td>0-9914-69787-66-8</td>
+              <td class="text-left">บริษัททดสอบ2</td>
+              <td>สำนักงานใหญ่</td>
+              <td>TEST01/2564</td>
+              <td>10/12/2564</td>
+              <td>รอพิจารณา</td>
+              <td><a [routerLink]="['/consider/save']" routerLinkActive="router-link-active"><span
+                    class="material-icons-outlined icon-bg">edit</span></a></td>
+            </tr>
+            <tr class='text-center'>
+              <th scope="row" class='text-center'>3</th>
+              <td>0-9914-69787-66-8</td>
+              <td class="text-left">บริษัททดสอบ3</td>
+              <td>สำนักงานใหญ่</td>
+              <td>TEST01/2564</td>
+              <td>10/12/2564</td>
+              <td>รอพิจารณา</td>
+              <td><a [routerLink]="['/consider/save']" routerLinkActive="router-link-active"><span
+                    class="material-icons-outlined icon-bg">edit</span></a></td>
+            </tr>
+            <tr class='bg-white'>
+              <th colspan="4" rowspan="1" scope="row" style="text-align:left">แสดงทั้งหมด <span
+                  class="bodybold">10</span>
+                รายการ</th>
+              <td colspan="5" style="text-align: right;">
+                <ul class="pagination pagination-sm pagination-table">
+                  <li class="page-item">
+                    <a class="page-link">
+                      <i class="icon-previous1"></i>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link">
+                      1
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      2
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      3
+                    </a>
+                  </li>
+                  <div class="point">...</div>
+                  <li class="page-item">
+                    <a class="page-link">
+                      5
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      <i class="icon-next1"></i>
+                    </a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="mb-5">
+    <div class="mt-4 mb-5">
+      <app-taxpayer-info [taxpayerInfo]="taxpayerInfo"></app-taxpayer-info>
+      <br>
+      <app-taxpayer-address [taxpayerAddress]="taxpayerAddress"></app-taxpayer-address>
+      <br>
+      <div class="box-content">
+        <div class="topic line-b mb-4">
+          <h4 class="navy">ความเห็นเจ้าหน้าที่พิจารณา</h4>
+        </div>
+        <div class="form-group row">
+          <div class="col-3">
+            <label>เจ้าหน้าที่พิจารณาลงความเห็น</label>
+            <p>เห็นควรอนุมัติ</p>
+          </div>
+          <div class="col-3">
+            <label>เหตุผลเจ้าหน้าที่พิจารณา</label>
+            <p>ตรวจสอบข้อมูลแล้วถูกต้องครบถ้วนจึงเห็นควรอนุมัติ</p>
+          </div>
+          <div class="col-3">
+            <label>วันที่ลงความเห็น</label>
+            <p>11/12/2564</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="box-content">
+        <div class="topic line-b mb-4">
+          <h4 class="navy">ความเห็นของผู้มีอำนาจสั่งการ</h4>
+        </div>
+        <div class="form-group row">
+          <div class="col-3">
+            <div class="form-check mb-3">
+              <input id="radio-5" class="checkbox-custom" name="radio" type="radio" checked="">
+              <label for="radio-5" class="radio-label">อนุมัติ</label>
+            </div>
+            <div class="form-check mb-3">
+              <input id="radio-6" name="radio" type="radio" class="checkbox-custom">
+              <label for="radio-6" class="radio-label">ไม่อนุมัติ</label>
+            </div>
+            <div class="form-check">
+              <input id="radio-7" name="radio" type="radio" class="checkbox-custom">
+              <label for="radio-7" class="radio-label">ส่งกลับแก้ไข</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-6 mb-3">
+                <label>วันที่ลงความเห็น<span class="red">*</span></label>
+                <div class="form-icon">
+                  <i class="material-icons-outlined right">calendar_today</i>
+                  <input class="form-control" type="text" placeholder="วัน/เดือน/ปี">
+                </div>
+              </div>
+              <div class="col-12">
+                <label>เหตุผลผู้มีอำนาจสั่งการ<span class="red">*</span></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid p-3 line-t">
+  <div class="container btn-footer">
+    <button type="button" class="btn btn-light mr-auto" style="min-width: 100px;" (click)="goBack()">ย้อนกลับ</button>
+    <button type="button" class="btn btn-primary" style="min-width: 100px;">ยืนยัน</button>
+  </div>
+</div>

@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+$blue-color: #32A2CD;
+$graylight-color: #E6E6E6;
+$red-color: #BA2929;
+$bluelight-color: #D6ECF5;
+$bluefade: #ADDAEB;
+
+input.blue-light {
+  background-color: $bluelight-color;
+}
+
+.has-error {
+  .form-control {
+      background-color: #fff;
+      border-color: $red-color;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(231, 73, 45, 0.25);
+  }
+  .form-control:focus {
+      background-color: #fff;
+      border-color: $red-color;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(231, 73, 45, 0.25);
+  }
+}
+
+typeahead-container button {
+  &.dropdown-item.active, &.dropdown-item:active, &.dropdown-item:hover, &.dropdown-item:focus {
+      background-color: $blue-color
+  }
+}
+
+// START NG-SELECT
+ng-select.force>.ng-select-container {
+  background-color: #FDF8EB;
+}
+
+.ng-select.ng-select-disabled>.ng-select-container {
+  background-color: $graylight-color;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+  height: 2rem;
+  min-height: 2rem;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+  top: unset;
+}
+
+.ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+  border-color: #80bdff !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.has-error .ng-select .ng-select-container,
+.has-error .ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+  border-color: $red-color !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(231 73 45 / 25%);
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  background-color: $bluelight-color !important;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected, .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
+  background-color: #ffffff;
+}
+// END NG-SELECT
+
+// START NG-ZORRO
+table {
+  border: 0px !important;
+  border-radius: 5px !important;
+}
+
+.nz-table-out-bordered>.ant-table-container {
+  border-radius: 5px;
+}
+
+.total-left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  display: inline-block;
+  height: 25px;
+  margin-right: 8px;
+  line-height: 30px;
+  vertical-align: middle;
+  margin-top: 5px;
+}
+
+.ant-table-thead {
+  tr.ant-table-row {
+      th.ant-table-cell {
+          background-color: $bluefade;
+      }
+  }
+}
+
+.ant-table-tbody >.ant-table-row {
+  &:nth-child(even) {
+      background-color: rgba(242, 242, 242, 0.7);
+  }
+}
+
+.ant-table-tbody >.ant-table-row:focus, .ant-table-tbody >.ant-table-row.active, .ant-table-row:focus-visible{
+  background-color: $bluelight-color;
+  border: 0px;
+  outline: unset;
+}
+
+.ant-table-tbody>tr>td, .ant-table-thead>tr>th {
+  padding: 13px;
+}
+
+.ant-pagination-item {
+  border-radius: 20px;
+  border: 0px;
+}
+
+.ant-pagination-item-active {
+  border-radius: 20px;
+  border: 0px;
+  background-color: $bluelight-color;
+}
+
+.ant-pagination-item-link i.anticon {
+  vertical-align: 0rem;
+}
+
+.custom-row-hover:hover td {
+  background: $bluelight-color !important;
+}
+
+.ant-pagination-prev, .ant-pagination-prev.ant-pagination-disabled, .ant-pagination-next, .ant-pagination-next.ant-pagination-disabled {
+  button.ant-pagination-item-link {
+      border: 0px;
+  }
+}
+
+.ant-checkbox .ant-checkbox-inner {
+  width: 25px;
+  height: 25px;
+}
+
+.ant-checkbox-disabled .ant-checkbox-inner {
+  width: 25px;
+  height: 25px;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  width: 25px;
+  height: 25px;
+}
+
+.cdk-overlay-container {
+  z-index: 10000;
+}
+// END NG-ZORRO

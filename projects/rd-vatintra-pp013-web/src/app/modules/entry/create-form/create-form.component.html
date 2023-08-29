@@ -1,0 +1,31 @@
+<lib-navbar [profileData]="profileData"></lib-navbar>
+
+<div class="app-main" style="top: 88px;">
+  <div class="box-step" *ngIf="step !== 'completed'">
+    <div class="bluelight-bg px-3 ">
+      <label class="mt-1 mb-2" [class.mb-5]="step === 'search'">บันทึกแบบคำขอ / {{titlePage}}</label>
+
+      <div class="container" *ngIf="step !== 'search'">
+        <h2 class="navy text-center m-0">แบบคำขอประกอบกิจการค้าทองคำ ภ.พ.01.3</h2>
+        <ul class="progressbar py-4">
+          <li [class.done]="['2', '3', '4', '5'].includes(step)" [class.active]="step === '1'">
+            <span>ข้อมูลผู้ประกอบการ</span>
+          </li>
+          <li [class.done]="['3', '4', '5'].includes(step)" [class.active]="step === '2'">
+            <span>ข้อมูลสถานประกอบการ</span>
+          </li>
+          <li [class.done]="['4', '5'].includes(step)" [class.active]="step === '3'">
+            <span>คุณสมบัติผู้ประกอบการ</span>
+          </li>
+          <li [class.done]="['5'].includes(step)" [class.active]="step === '4'">
+            <span>ตรวจสอบข้อมูล</span>
+          </li>
+          <li [class.active]="step === '5'">
+            <span>ส่งคำขอ</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

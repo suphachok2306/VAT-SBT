@@ -1,0 +1,114 @@
+@import "./colors.scss";
+@import "./font.scss";
+.table {
+    .pagination{
+        justify-content: end;
+        margin-bottom: auto;
+    }
+    tr{
+      position: relative;
+    }
+    a.page-link {
+        border: none;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: $gray-color;
+        @extend .small;
+        i{
+            margin: auto;
+        }
+    }
+    a.page-link:hover{
+        border-radius: 50% !important;
+        width: 30px;
+        height: 30px;
+        color: $main-color;
+    }
+    .page-item.active .page-link{
+        border-radius: 50%;
+        color: $main-color;
+        background-color: $bluelight-color;
+        border-color: $bluelight-color;
+    }
+    .page-item{
+        margin-inline: 1px;
+    }
+    .point{
+        line-height: 30px;
+        margin-inline: 8px;
+        color: $gray-color;
+    }
+    .icon-bg {
+      background: #f1f3f4;
+      border-radius: 8px;
+      padding: 6px;
+      width: 35px;
+      height: 35px;
+      position: relative;
+      line-height: 22px !important;
+      color: $main-color;
+      font-size: 20px !important;
+      border: solid 1px $border-color;
+    }
+    .form-check .checkbox-custom-label{
+      justify-content: center;
+    }
+    .form-check .checkbox-custom + .checkbox-custom-label:before{
+      margin-right: 0;
+    }
+}
+
+.table .thead-light th {
+    color: $dark-color;
+    background-color: $bluefade;
+    @extend .bodybold;
+    border: none;
+    vertical-align: middle;
+    display: revert;
+  }
+.table td, .table th{
+    border-top: 1px solid $graylight-color;
+    vertical-align: middle;
+    padding: 0.5rem 0.75rem;
+    font-weight: normal;
+}
+
+table {
+    border-radius: 5px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #E6E6E6;
+    tbody {
+    overflow: auto;
+    }
+  tbody tr:nth-child(even) {
+    background-color: $grayfade-color;
+  }
+  span.material-icons-outlined {
+    vertical-align: text-bottom;
+}
+th .icon {
+    font-size: 20px;
+    position: relative;
+    top: 4px;
+}
+}
+
+@media screen and (max-width: 990px) {
+  table {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+table tbody tr#clickNextPage:hover{
+  cursor: pointer;
+  background: #E6E6E6;
+}
+
+/*.table-striped tbody tr:last-child,
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color:$white-color;
+}*/

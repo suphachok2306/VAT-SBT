@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="box-content">
+    <div class="topic line-b mb-4">
+      <h4 class="navy">ข้อมูลสถานประกอบการ</h4>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">สำนักงานที่ยื่นคำขอ <span class="red">*</span></label>
+      </div>
+      <div class="col-9">
+        <div class="row">
+          <div class="col-auto">
+            <div class="form-check d-inline-flex">
+              <input id="radio-1" class="checkbox-custom" name="radio1" type="radio" checked="">
+              <label for="radio-1" class="radio-label ml-0">สำนักงานใหญ่</label>
+              <input id="radio-2" name="radio1" type="radio" class="checkbox-custom">
+              <label for="radio-2" class="radio-label">สาขาที่</label>
+            </div>
+          </div>
+          <div class="col-2 pl-0">
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">สถานประกอบการที่ตั้งอยู่</label>
+      </div>
+      <div class="col-9">
+        <p>เลขที่ 233 หมู่ที่ 13 ถนน ลำบาง-เชียงใหม่ ตำบลปงยางคก อำเภอห้างฉัตร จังหวัดลำปาง รหัสไปรษณีย์ 52190</p>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">โทรศัพท์</label>
+      </div>
+      <div class="col-3">
+        <input class="form-control" mask="00-000-0000">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-3 line-t mt-5">
+  <div class="container btn-footer">
+    <button type="button" class="btn btn-light mr-auto" style="min-width: 100px;" (click)="goBack()">ย้อนกลับ</button>
+    <button type="button" class="btn btn-primary" style="min-width: 100px;" (click)="goNext()">ต่อไป</button>
+  </div>
+</div>

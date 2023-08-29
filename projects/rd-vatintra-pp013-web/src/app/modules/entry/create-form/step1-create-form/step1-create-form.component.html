@@ -1,0 +1,108 @@
+<div [formGroup]="formGroupMain" class="container">
+  <div class="box-content">
+    <div class="topic line-b mb-4">
+      <h4 class="navy">ข้อมูลผู้ประกอบการ</h4>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-6 col-form-label">เลขทะเบียนผู้รับ <span class="red">*</span></label>
+          <div class="col-6">
+            <input libNumberOnly maxlength="8" class="form-control" formControlName="recRegNo">
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group row align-items-center">
+          <label class="col-3 col-form-label">วันที่รับแบบ <span class="red">*</span></label>
+          <div class="col-5">
+            <div class="form-icon">
+              <i class="material-icons-outlined right">calendar_today</i>
+              <input class="form-control" type="text" placeholder="วัน/เดือน/ปี" formControlName="recDate" bsDatepicker>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">เลขประจำตัวผู้เสียภาษีอากร <span class="red">*</span></label>
+      </div>
+      <div class="col-3">
+        <input class="form-control" formControlName="nid" mask="0-0000-00000-00-0">
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">ชื่อผู้ประกอบกิจการ</label>
+      </div>
+      <div class="col-9">
+        <p>{{ formGroupMain.value.titleName }} {{ formGroupMain.value.firstName }} {{ formGroupMain.value.lastName }}
+        </p>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">ชื่อสถานประกอบการค้าทองคำ</label>
+      </div>
+      <div class="col-9">
+        <p>{{ formGroupMain.value.branchTitleName }} {{ formGroupMain.value.branchName }}</p>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">ที่อยู่สำนักงานใหญ่</label>
+      </div>
+      <div class="col-9">
+        <p>เลขที่ 233 หมู่ที่ 13 ถนน ลำบาง-เชียงใหม่ ตำบลปงยางคก อำเภอห้างฉัตร จังหวัดลำปาง รหัสไปรษณีย์ 52190</p>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">โทรศัพท์</label>
+      </div>
+      <div class="col-3">
+        <input class="form-control" formControlName="telNo" mask="00-000-0000">
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">เลขที่ทะเบียนพาณิชย์/ทะเบียนนิติบุคคล</label>
+      </div>
+      <div class="col-9">
+        <p>{{ formGroupMain.value.juristicRegNo | mask: '0-0000-00000-00-0' }}</p>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">ลงวันที่</label>
+      </div>
+      <div class="col-9">
+        <p>{{ formGroupMain.value.juristicRegDate }}</p>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">วันที่จดทะเบียนภาษีมูลค่าเพิ่ม</label>
+      </div>
+      <div class="col-9">
+        <p>{{ formGroupMain.value.businessFirstDate }}</p>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <div class="col-3">
+        <label class="col-form-label">มีสาขารวม</label>
+      </div>
+      <div class="col-9">
+        <p>{{ formGroupMain.value.branchNum }} สาขา</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-3 line-t mt-5">
+  <div class="container btn-footer">
+    <button type="button" class="btn btn-light mr-auto" style="min-width: 100px;" (click)="goBack()">ย้อนกลับ</button>
+    <button type="button" class="btn btn-primary" style="min-width: 100px;" (click)="goNext()">ต่อไป</button>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+@import "./colors.scss";
+.progressbar {
+    counter-reset: step;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+    li:first-child{
+      margin-left: auto;
+    }
+    li:last-child{
+      margin-right: auto;
+    }
+    li {
+      list-style-type: none;
+      min-width: 14%; /* number of steps */
+      /*width: calc(100% / 4); /* number of steps */
+      float: left;
+      position: relative;
+      text-align: center;
+      --text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+      color: $gray-color;
+      padding: 0 2em;
+    }
+    li span{
+      font-size: 16px;
+    }
+  /* step circles */
+   li:before {
+      width: 40px;
+      height: 40px;
+      line-height: 34px;
+      content: counter(step);
+      counter-increment: step;
+      border: 2px solid $border-color;
+      display: block;
+      text-align: center;
+      margin: 0 auto 0 auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+
+  /* step line */
+  li:after {
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background-color: $border-color;
+      top: 20px;
+      left: -50%;
+      z-index: -1;
+  }
+   li:first-child:after {
+      content: none;
+  }
+  li.active {
+      color: $main-color;
+  }
+  li.active:before {
+      border-color: $main-color;
+      background-color: $white-color;
+      color: $main-color;
+  }
+   li.active + li.done:after {
+      background-color: $main-color;
+  }
+
+   li.done {
+      color: $main-color;
+  }
+  /* Step circle */
+  li.done:before {
+      border-color: $main-color;
+      background-color: $main-color;
+      color: white;
+  }
+  /* line to next step */
+   li.done + li:after {
+      background-color: $main-color;
+  }
+}
+
+.box-step{
+  .bluelight-bg{
+    position: relative;
+    z-index: 9;
+  }
+}

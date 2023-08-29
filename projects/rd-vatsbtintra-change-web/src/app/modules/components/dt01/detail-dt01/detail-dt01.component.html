@@ -1,0 +1,221 @@
+<div class="tab-content" id="myTabContent">
+  <div [formGroup]="dt01Form" class="p-1">
+    <div class="box-content">
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group row">
+            <div class="col-auto">
+              <label class="col-form-label">เลขประจำตัวผู้เสียภาษีอากร</label>
+            </div>
+            <div class="col-3">
+              <fieldset disabled="">
+                <input type="text" class="form-control" mask="0-0000-00000-00-0" formControlName="nid">
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-content">
+      <div class="topic navy line-b mt-4 mb-4">
+        <h4>ที่อยู่</h4>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="box-content">
+            <form>
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ห้องเลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" class="form-control" formControlName="roomNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ชั้นที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" class="form-control" formControlName="floorNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">เลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" class="form-control" formControlName="addNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">รหัสไปรษณีย์ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" class="form-control" formControlName="posCod">
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="topic navy line-b mt-4 mb-4">
+        <h4>ที่อยู่ของสาขา</h4>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="box-content">
+            <form>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">สาขาที่ </label></div>
+                <div class="col-2">
+                  <fieldset *ngIf="forSta !== 'EA'" disabled="">
+                    <input type="text" class="form-control" formControlName="braNo">
+                  </fieldset>
+                  <fieldset *ngIf="forSta === 'EA'">
+                    <input type="text" class="form-control" formControlName="braNo">
+                  </fieldset>
+                </div>
+              </div>
+
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ห้องเลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset>
+                    <input type="text" class="form-control" formControlName="braRoomNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ชั้นที่ </label></div>
+                <div class="col-2">
+                  <fieldset>
+                    <input type="text" class="form-control" formControlName="braFloorNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">เลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset>
+                    <input type="text" class="form-control" formControlName="braAddNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">รหัสไปรษณีย์ </label><span
+                    class="red">*</span></div>
+                <div class="col-2">
+                  <fieldset>
+                    <input type="text" class="form-control" formControlName="braPosCod">
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-content">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row">
+              <div class="col-4 text-right">
+                <label class="col-form-label">ประเภทภาษีอากร</label>
+              </div>
+              <div class="col-2">
+                <fieldset disabled="">
+                  <input type="text" class="form-control" id="vat">
+                </fieldset>
+              </div>
+              <label class="col-form-label">มูลค่าเพิ่ม</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group row">
+              <div class="col-2">
+                <fieldset disabled="">
+                  <input type="text" class="form-control" id="sbt">
+                </fieldset>
+              </div>
+              <label class="col-form-label">ธุรกิจเฉพาะ</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="box-content">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row">
+              <label class="col-4 col-form-label text-right">รหัสสำนักงานที่ขอแก้ไข</label>
+              <div class="col-4">
+                <fieldset disabled="">
+                  <input type="text" class="form-control" formControlName="reqOffCod">
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="box-content">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row">
+              <label class="col-4 col-form-label text-right">รหัสเจ้าหน้าที่</label>
+              <div class="col-4">
+                <fieldset disabled="">
+                  <input type="text" class="form-control" formControlName="ofrCod">
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-4 pt-4 line-t">
+      <div class="btn-footer">
+        <button type="button" class="btn btn-primary mr-3" (click)="onSave()">[F2] บันทึก</button>
+        <button type="button" class="btn btn-primary mr-auto" (click)="onClear()">[F6] ล้างข้อความ</button>
+        <button type="button" class="btn btn-primary mr-3" (click)="onExit()">[F7] ย้อนกลับ</button>
+        <button type="button" class="btn btn-primary" (click)="onLogOut()">[F9] ออกจากระบบ</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal" bsModal #modal="bs-modal" [config]="{backdrop: 'static', keyboard: false}" tabindex="-1"
+    role="dialog" aria-labelledby="dialog-static-name">
+    <div class="centered col-6 w-80 pt-7 m-auto">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="form-group row justify-content-center">
+                    {{mas}}
+                </div>
+                <div class="row justify-content-center">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary mr-2" (click)="modal.hide()">ตกลง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

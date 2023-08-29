@@ -1,0 +1,444 @@
+<!-- <div class="col-12 p-4 mb-5 ml-auto bluelight-bg"> -->
+<div class="tab-content" id="myTabContent">
+    <div [formGroup]="formGroup" class="p-1">
+        <div class="box-content">
+            <div class="topic navy line-b mt-4 mb-4">
+                <h4>ระบุเลขทะเบียนคุมเอกสารเดิม</h4>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-content">
+                        <form>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">ประเภทเอกสารที่นำส่ง</label>
+                                            <div class="col-3">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="odlnForCod"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">วันที่นำส่ง</label>
+                                            <div class="col-4">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" mask="00/00/0000"
+                                                        formControlName="odlnBatDat" required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">รหัสหน่วยงาน</label>
+                                            <div class="col-4">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control"
+                                                        formControlName="odlnBatOffCod" required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">สถานะการเป็น</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="odlnLtoSta"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">รหัสสำนักงานภูมิลำเนา</label>
+                                            <div class="col-4">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control"
+                                                        formControlName="odlnHomeOffCod" required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">สถานะการยื่นแบบ</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="odlnForSta"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">ประเภทการยื่นแบบ</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="odlnSubTyp"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">ลำดับที่ของใบนำส่ง</label>
+                                            <div class="col-3">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="odlnBatNo"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">รหัสเครื่อง</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control"
+                                                        formControlName="odlnCompCod" required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">ลำดับที่ของแบบ</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control"
+                                                        formControlName="odlnBatSeqNo" required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic navy line-b mt-4 mb-4">
+                <h4>โอนรายการ</h4>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-content">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="title mb-3 p-2 grayfade-bg text-center">รายการเดิม</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="title grayfade-bg p-2 mb-3 text-left">รายการใหม่</div>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">เลขประจำตัวผู้เสียภาษีอากร</label>
+                                            <div class="col-6">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" mask="0-0000-00000-00-0"
+                                                        formControlName="oldNid" required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">เลขประจำตัวผู้เสียภาษีอากร</label>
+                                            <div class="col-6">
+                                                <fieldset [disabled]="disabledFormU">
+                                                    <input type="text" class="form-control" mask="0-0000-00000-00-0"
+                                                        formControlName="nid" required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">สาขาที่</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="oldBraNo"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">สาขาที่</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormU">
+                                                    <input type="text" class="form-control" formControlName="braNo"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">เดือน / ปี</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="oldTaxMon"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-3">
+                                                <fieldset [disabled]="disabledFormC">
+                                                    <input type="text" class="form-control" formControlName="oldTaxYea"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label">เดือน / ปี</label>
+                                            <div class="col-2">
+                                                <fieldset [disabled]="disabledFormU">
+                                                    <input type="text" class="form-control" formControlName="taxMon"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-3">
+                                                <fieldset [disabled]="disabledFormU">
+                                                    <input type="text" class="form-control" formControlName="taxYea"
+                                                        required>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label">ประเภทภาษีอากร </label>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <fieldset [disabled]="disabledFormC">
+                                                <input type="text" class="form-control" formControlName="vatStatus">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-9">
+                                            <label class="col-12 col-form-label">มูลค่าเพิ่ม </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-1 col-form-label"> </label>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <fieldset [disabled]="disabledFormC">
+                                                <input type="text" class="form-control" formControlName="sbtStatus">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-9">
+                                            <label class="col-12 col-form-label">ธุรกิจเฉพาะ </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label">ต้องการคำนวนและพิมพ์ใหม่ใช่หรือไม่ </label>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <fieldset [disabled]="disabledFormC">
+                                                <input type="text" class="form-control" formControlName="vatStatus">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-9">
+                                            <label class="col-12 col-form-label">ใช่ </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="col-1 col-form-label"> </label>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <fieldset [disabled]="disabledFormC">
+                                                <input type="text" class="form-control" formControlName="sbtStatus">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-9">
+                                            <label class="col-12 col-form-label">ไม่ </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">รหัสสำนักงานที่ขอแก้ไข </label>
+                                <div class="col-2">
+                                    <fieldset [disabled]="disabledFormC">
+                                        <input type="text" class="form-control" formControlName="reqOffCod">
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">รหัสเจ้าหน้าที่ </label>
+                                <div class="col-2">
+                                    <fieldset [disabled]="disabledFormC">
+                                        <input type="text" class="form-control" formControlName="ofrCod">
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="type=='U'">
+                <div class="topic navy line-b mt-4 mb-4">
+                    <h4>สถานะรายการ</h4>
+                </div>
+                <div class="form-group row mt-3">
+                    <label class="col-2 col-form-label">ลงคำสั่ง<span class="red">*</span> </label>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input id="radio-1" class="checkbox-custom" type="radio" formControlName="aprSta"
+                                        value="0">
+                                    <label for="radio-1" class="radio-label">รอการพิจารณา</label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input id="radio-2" class="checkbox-custom" type="radio" formControlName="aprSta"
+                                        value="1">
+                                    <label for="radio-2" class="radio-label">อนุมัติ</label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input id="radio-3" class="checkbox-custom" type="radio" formControlName="aprSta"
+                                        value="2">
+                                    <label for="radio-3" class="radio-label">ไม่อนุมัติ</label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <label class="radio-label">วันที่ลงนาม<span class="red">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-check">
+                                    <input class="form-control" formControlName="aprDat" mask="00/00/0000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mt-3">
+                    <label class="col-2 col-form-label">หมายเหตุ (ถ้ามี) </label>
+                    <div class="col-10">
+                        <input class="form-control" formControlName="aprRemark">
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-primary mr-3" (click)="cancel()">
+                        ย้อนกลับ
+                    </button>
+                    <button type="button" class="btn btn-primary mr-3">
+                        ดูข้อมูล
+                    </button>
+                    <button type="button" class="btn btn-primary mr-3" (click)="save()">
+                        บันทึกข้อมูล
+                    </button>
+                    <button type="button" class="btn btn-primary mr-3" (click)="clear()">
+                        ล้างข้อมูล
+                    </button>
+                </div>
+            </div>
+
+            <div *ngIf="type=='C'" class="mt-4 pt-4 line-t">
+                <div class="btn-footer">
+                    <button type="button" class="btn btn-primary mr-3" (click)="save()">[F2] บันทึก</button>
+                    <button type="button" class="btn btn-primary mr-auto" (click)="clear()">[F6]
+                        ล้างข้อความ</button>
+                    <button type="button" class="btn btn-primary mr-3" (click)="onAccept()">[F7] ย้อนกลับ</button>
+                    <button type="button" class="btn btn-primary" (click)="logOut()">[F9] ออกจากระบบ</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- </div> -->
+
+<div class="modal" bsModal #modal="bs-modal" [config]="{backdrop: 'static', keyboard: false}" tabindex="-1"
+    role="dialog" aria-labelledby="dialog-static-name">
+    <div class="centered col-6 w-80 pt-7 m-auto">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="form-group row justify-content-center">
+                    บันทึกข้อมูลเรียบร้อย
+                </div>
+                <div class="row justify-content-center">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary mr-2" (click)="onAccept()">ตกลง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" bsModal #modalSave="bs-modal" [config]="{backdrop: 'static', keyboard: false}" tabindex="-1"
+    role="dialog" aria-labelledby="dialog-static-name">
+    <div class="centered col-6 w-80 pt-7 m-auto">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="form-group row justify-content-center">
+                    {{mas}}
+                </div>
+                <div class="row justify-content-center">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary mr-2" (click)="modalSave.hide()">ตกลง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

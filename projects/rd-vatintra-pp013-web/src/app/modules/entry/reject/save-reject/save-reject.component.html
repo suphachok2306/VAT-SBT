@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="mb-5">
+    <div class="mt-4 mb-5">
+      <app-taxpayer-info [taxpayerInfo]="taxpayerInfo"></app-taxpayer-info>
+      <br>
+      <app-taxpayer-address [taxpayerAddress]="taxpayerAddress"></app-taxpayer-address>
+      <br>
+      <div class="box-content">
+        <div class="topic line-b mb-4">
+          <h4 class="navy">เหตุผลในการลบรายการออกจากระบบ</h4>
+        </div>
+        <div class="form-group row">
+          <div class="col-12">
+            <div class="form-group row">
+              <div class="col-12">
+                <div class="form-check mb-3">
+                  <input id="radio-5" class="checkbox-custom" name="radio" type="radio" checked="">
+                  <label for="radio-5" class="radio-label">ผู้เสียภาษีอากรขอออกจากระบบ</label>
+                </div>
+              </div>
+              <div class="col-6 pl-5 ml-3">
+                <label>ตามหนังสือเลขที่<span class="red">*</span></label>
+                <input class="form-control">
+              </div>
+              <div class="col-3">
+                <label>ลงวันที่<span class="red">*</span></label>
+                <div class="form-icon">
+                  <i class="material-icons-outlined right">calendar_today</i>
+                  <input class="form-control" type="text" placeholder="วัน/เดือน/ปี">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-12">
+                <div class="form-check mb-3">
+                  <input id="radio-6" class="checkbox-custom" name="radio" type="radio">
+                  <label for="radio-6" class="radio-label">เจ้าหน้าที่ต้องการลบรายการออกจากระบบ</label>
+                </div>
+              </div>
+              <div class="col-8 pl-5 ml-3">
+                <label>เนื่องจาก<span class="red">*</span></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-3 pl-5 ml-3">
+                <label>มีผลตั้งแต่วันที่<span class="red">*</span></label>
+                <div class="form-icon">
+                  <i class="material-icons-outlined right">calendar_today</i>
+                  <input class="form-control" type="text" placeholder="วัน/เดือน/ปี">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid p-3 line-t">
+  <div class="container btn-footer">
+    <button type="button" class="btn btn-light mr-auto" style="min-width: 100px;" (click)="goBack()">ย้อนกลับ</button>
+    <button type="button" class="btn btn-primary" style="min-width: 100px;">ยืนยัน</button>
+  </div>
+</div>

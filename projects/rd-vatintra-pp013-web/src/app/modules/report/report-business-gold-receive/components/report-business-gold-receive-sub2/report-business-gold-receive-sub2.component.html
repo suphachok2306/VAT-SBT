@@ -1,0 +1,103 @@
+<div class="container my-3">
+    <div class="topic navy line-b mt-2 mb-3">
+        <h4 class="mb-2">รายงานทะเบียนรับแบบแจ้งการประกอบค้าทองคำ</h4>
+    </div>
+    <div class="form-group row m-o">
+        <div class="col-12">
+            <label class="col-form-label">สำนักงานสรรพากรพื้นที่กรุงเทพมหานคร 1</label>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end mb-2">
+        <p class="align-self-center">แสดงหน้าละ &nbsp;</p>
+        <input type="text" class="form-control align-self-center text-center" style="width: 4%" value="10" />
+        <p class="align-self-center">&nbsp; รายการ</p>
+    </div>
+    <table class="table" aria-describedby="">
+        <thead class="thead-light">
+            <tr class="text-center">
+                <th>ลำดับที่</th>
+                <th>วันที่รับแบบ</th>
+                <th>เลขประจำตัวผู้เสียภาษีอากร</th>
+                <th>สาขา</th>
+                <th>ชื่อสถานประกอบการ</th>
+                <th>ส.ท. ที่รับแบบแจ้ง</th>
+                <th>จำนวนสถานประกอบการ</th>
+                <th>การเปลื่ยนแปลง</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center">
+                <th scope="row" class="text-center">1</th>
+                <td>29/08/2564</td>
+                <td class="text-left">0-1034-96001-50-9</td>
+                <td>0</td>
+                <td class="text-left">ห้างหุ้นส่วนจำกัด กิมฮงเหลี่ยงกี่</td>
+                <td>ส.ท. กรุงเทพมหานคร 1</td>
+                <td>2</td>
+                <td>-</td>
+            </tr>
+            <tr class="text-center">
+                <th scope="row" class="text-center">2</th>
+                <td>11/03/2564</td>
+                <td class="text-left">0-1035-19001-53-4</td>
+                <td>0</td>
+                <td class="text-left">บริษัท บางกอก โกลด์ บลูเลื่ยน จำกัด</td>
+                <td>ส.ท. กรุงเทพมหานคร 1</td>
+                <td>1</td>
+                <td>-</td>
+            </tr>
+
+            <tr class="bg-light">
+                <th colspan="5" rowspan="1" scope="row" style="text-align: left">
+                    แสดงทั้งหมด <span class="bodybold">2</span> รายการ
+                </th>
+                <td colspan="3" style="text-align: right">
+                    <ul class="pagination pagination-sm pagination-table">
+                        <li class="page-item">
+                            <a class="page-link">
+                                <em class="icon-previous1"></em>
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link"> 1 </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link"> 2 </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link"> 3 </a>
+                        </li>
+                        <div class="point">...</div>
+                        <li class="page-item">
+                            <a class="page-link"> 5 </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link">
+                                <em class="icon-next1"></em>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="ml-3">
+            <button type="button" class="btn btn-primary">
+                <i class="far fa-file-pdf mr-2" aria-hidden="true"></i> พิมพ์รายงาน(PDF)
+
+            </button>
+        </div>
+        <div class="ml-4">
+            <button type="button" class="btn btn-primary">
+                <i class="far fa-file-excel mr-2"></i> Export
+                Excel
+            </button>
+        </div>
+        <div class="ml-4">
+            <button type="button" class="btn btn-primary px-3" (click)="setPage()">
+                <em class="fa fa-arrow-left"></em> &nbsp; Back
+            </button>
+        </div>
+    </div>
+</div>

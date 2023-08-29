@@ -1,0 +1,99 @@
+<div class="container pb-1">
+  <div class="mb-5 mt-4">
+    <div class="tab-content mb-3" id="myTabContent">
+      <form class="form-search pt-2" style="background-color: #ffffff">
+        <div class="form-group">
+          <div class="topic navy line-b mt-2 mb-3">
+            <h4>เพิ่มผู้ใช้งาน</h4>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-2"></div>
+          <div class="col-2 d-flex justify-content-start">
+            <label class="form-label mt-2">รหัสผู้ใช้งาน</label>
+          </div>
+          <div class="col-4">
+            <input class="form-control" />
+          </div>
+          <div class="col-4">
+            <button type="button" class="btn btn-primary mr-3">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              ค้นหาผู้ใช้งานจากระบบ sso
+            </button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-2"></div>
+          <div class="col-2 d-flex justify-content-start">
+            <label class="form-label mt-2">คำนำหน้าชื่อ</label>
+          </div>
+          <div class="col-4">
+            <input class="form-control" disabled />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-2"></div>
+          <div class="col-2 d-flex justify-content-start">
+            <label class="form-label mt-2">ชื่อ</label>
+          </div>
+          <div class="col-5">
+            <input class="form-control" disabled />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-2"></div>
+          <div class="col-2 d-flex justify-content-start">
+            <label class="form-label mt-2">นามสกุล</label>
+          </div>
+          <div class="col-5">
+            <input class="form-control" disabled />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-2"></div>
+          <div class="col-2 d-flex justify-content-start">
+            <label class="form-label mt-2">หน่วยงาน</label>
+          </div>
+          <div class="col-5">
+            <input class="form-control" disabled />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-2"></div>
+          <div class="col-2 d-flex justify-content-start">
+            <label class="form-label mt-2">ตำแหน่ง</label>
+          </div>
+          <div class="col-5">
+            <input class="form-control" disabled />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-2"></div>
+          <div class="col-2 d-flex justify-content-start">
+            <label class="form-label mt-2">อีเมล</label>
+          </div>
+          <div class="col-5">
+            <input class="form-control" disabled />
+          </div>
+        </div>
+      </form>
+      <div class="row d-flex justify-content-center">
+        <div class="mx-3" style="width: 120px;">
+          <button type="button" class="btn btn-primary" style="width:100%">
+            บันทึก
+          </button>
+        </div>
+        <div class="mx-3" style="width: 120px;">
+
+          <button type="button" class="btn btn-light" style="width:100%">
+            ล้างข้อความ
+          </button>
+        </div>
+        <div class="mx-3" style="width: 120px;">
+
+          <button type="button" class="btn btn-outline-secondary " (click)="setPage()" style="width:100%">
+            ย้อนกลับ
+          </button>
+        </div>
+      </div>
+    </div>

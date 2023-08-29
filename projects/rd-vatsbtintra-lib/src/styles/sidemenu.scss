@@ -1,0 +1,107 @@
+@import "./colors.scss";
+.sidemenu-main2{
+    .sidebar-sticky{
+      position: sticky;
+      position: -webkit-sticky;
+      top: 76px;
+      height: calc(100vh - 76px);
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .nav{
+      flex-wrap: nowrap;
+    }
+    .first-nav{
+      border-bottom: 1px solid $border-color;
+    }
+    .nav-pills .nav-link,.navbar-expand-lg .navbar-nav .nav-link{
+        font-family: SarabunBold;
+        border-radius: 0;
+        padding: 0.55rem 1.25rem;
+        color: $main-color !important;
+        position: relative;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link,
+    .navbar-dark .navbar-nav .nav-link:focus{
+        background-color: $white-color;
+
+    }
+    .nav-pills .nav-link.active:before,
+    .nav-pills .show > .nav-link:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background: $blue-color;
+        left: 0;
+        top: 0;
+    }
+
+    .nav-link:hover.nav-item > a.nav-link:focus,
+      .sub2 a.nav-link.active {
+        background: $graylight-color;
+        text-decoration: none;
+    }
+    .nav-link:hover {
+      transition: all 0.4s;
+      background: $graylight-color;
+    }
+
+    .nav-item ul.nav-second-level {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .nav-item ul.nav-second-level > .nav-item > a.nav-link {
+      padding-left: 20px;
+      border-bottom: none !important;
+    }
+    .navbar-expand-lg .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: column;
+        display: block;
+        width: 100%;
+    }
+    [aria-expanded="false"] .submenu-icon::before,
+    [aria-expanded="true"] .submenu-icon::before {
+    	content: '\e5cf';
+    	display: block;
+    	position: absolute;
+    	right: 20px;
+    	font-family: 'Material Icons Outlined';
+    	font-size: 1em;
+      top:13px;
+      transform: rotate(180deg);
+      }
+
+    [aria-expanded=false] .submenu-icon::before {
+    	content: '\e5ce';
+    }
+    i {
+    font-style:normal;
+    }
+    .sub2 a.nav-link.active:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background: $graylight-color;
+        left: 0;
+        top: 0;
+      }
+      .collapse.sub2 a{
+        border-bottom: none !important;
+      }
+      .sub2 a.nav-link{
+        font-family: 'SarabunRegular' !important;
+        padding: 0.75em 1.9em !important;
+      }
+  }
+
+  @media (max-width: 991px) {
+    .sidemenu-main2{
+    .sidebar-sticky{
+    height: auto;
+    }
+    }
+  }

@@ -1,0 +1,264 @@
+<div class="tab-content" id="myTabContent">
+  <div [formGroup]="dt01Form" class="p-1">
+    <div class="box-content">
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group row">
+            <div class="col-auto">
+              <label class="col-form-label">เลขประจำตัวผู้เสียภาษีอากร</label>
+            </div>
+            <div class="col-3">
+              <fieldset disabled="">
+                <input type="text" id="disabledTextInput" class="form-control" mask="0-0000-00000-00-0"
+                  formControlName="nid">
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-content">
+      <div class="topic navy line-b mt-4 mb-4">
+        <h4>ที่อยู่</h4>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="box-content">
+            <form>
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ห้องเลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="roomNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ชั้นที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="floorNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">เลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="addNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">รหัสไปรษณีย์ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="posCod">
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="topic navy line-b mt-4 mb-4">
+        <h4>ที่อยู่ของสาขา</h4>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="box-content">
+            <form>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">สาขาที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="braNo" numberOnly>
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ห้องเลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="braRoomNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">ชั้นที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="braFloorNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">เลขที่ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="braAddNo">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-2 text-right"><label class="col-form-label">รหัสไปรษณีย์ </label></div>
+                <div class="col-2">
+                  <fieldset disabled="">
+                    <input type="text" id="disabledTextInput" class="form-control" formControlName="braPosCod">
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-content">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row">
+              <div class="col-4 text-right">
+                <label class="col-form-label">ประเภทภาษีอากร</label>
+              </div>
+              <div class="col-2">
+                <fieldset disabled="">
+                  <input type="text" id="disabledTextInput" class="form-control" id="vat">
+                </fieldset>
+              </div>
+              <label class="col-form-label">มูลค่าเพิ่ม</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group row">
+              <div class="col-2">
+                <fieldset disabled="">
+                  <input type="text" id="disabledTextInput" class="form-control" id="sbt">
+                </fieldset>
+              </div>
+              <label class="col-form-label">ธุรกิจเฉพาะ</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="box-content">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row">
+              <label class="col-4 col-form-label text-right">รหัสสำนักงานที่ขอแก้ไข</label>
+              <div class="col-4">
+                <fieldset disabled="">
+                  <input type="text" id="disabledTextInput" class="form-control" formControlName="reqOffCod">
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="box-content">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row">
+              <label class="col-4 col-form-label text-right">รหัสเจ้าหน้าที่</label>
+              <div class="col-4">
+                <fieldset disabled="">
+                  <input type="text" id="disabledTextInput" class="form-control" ormControlName="ofrCod">
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="topic navy line-b mt-4 mb-4">
+        <h4>สถานะรายการ</h4>
+      </div>
+
+      <div class="form-group row mt-3">
+        <label class="col-1 col-form-label">ลงคำสั่ง<span class="red">*</span> </label>
+        <div class="col-11">
+          <div class="row">
+            <div class="col-2">
+              <div class="form-check">
+                <input id="radio-1" class="checkbox-custom" name="aprSta" type="radio" value="0"
+                  formControlName="aprSta">
+                <label for="radio-1" class="radio-label">รอการพิจารณา</label>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <input id="radio-2" class="checkbox-custom" name="aprSta" type="radio" value="1"
+                  formControlName="aprSta">
+                <label for="radio-2" class="radio-label">อนุมัติ</label>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <input id="radio-3" class="checkbox-custom" name="aprSta" type="radio" value="2"
+                  formControlName="aprSta">
+                <label for="radio-3" class="radio-label">ไม่อนุมัติ</label>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check text-right">
+                <label class="radio-label">วันที่ลงนาม<span class="red">*</span></label>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <input class="form-control" formControlName="aprDat" mask="00/00/0000">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row mt-3">
+        <label class="col-2 col-form-label">หมายเหตุ (ถ้ามี) <span class="red">*</span></label>
+        <div class="col-10">
+          <input class="form-control" value="" formControlName="aprRemark">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group section-form px-2 text-center mt-3">
+      <button type="button" class="btn btn-primary mr-3" (click)="onExit()">ย้อนกลับ</button>
+      <button type="button" class="btn btn-primary mr-3">ดูแบบร่าง</button>
+      <button type="button" class="btn btn-primary mr-3" (click)="onSave()">บันทึกข้อมูล</button>
+      <button type="button" class="btn btn-light" (click)="onClear()">ล้างข้อมูล</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal" bsModal #modal="bs-modal" [config]="{backdrop: 'static', keyboard: false}" tabindex="-1"
+    role="dialog" aria-labelledby="dialog-static-name">
+    <div class="centered col-6 w-80 pt-7 m-auto">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="form-group row justify-content-center">
+                    {{mas}}
+                </div>
+                <div class="row justify-content-center">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary mr-2" (click)="modal.hide()">ตกลง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.pt-7 {
+  padding-top: 7rem !important;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0.09rem solid rgba(18, 132, 26, 0.39);
+  border-radius: 0.60rem;
+  outline: 0;
+}
+
+.modal {
+  top: 105px;
+  height: 85% !important;
+}
