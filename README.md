@@ -110,3 +110,12 @@ ng build rd-vatsbtintra-lib
 ng build rd-vatsbtintra-dashboard-web --base-href=/rd-vatsbtintra-dashboard-web/
 
 ```
+
+
+
+## **การใช้งานเบื้องต้นสำหรับเว็บแอปพลิเคชัน ( rd-vatintra-pp013-web )**
+**1.** มี 7 รายการให้เลือกทำรายการ
+![image](https://github.com/suphachok2306/VAT-SBT/assets/60811108/cab4cca9-7c72-46f6-8e3b-d36fafea54a7)
+
+**2.** นี้คือรายการที่ 7 (รายชื่อผู้ประกอบกิจการค้าทองคำที่ได้รับอนุมัติยกเว้นภาษีมูลค่าเพิ่ม VAT) 
+![image](https://github.com/suphachok2306/VAT-SBT/assets/60811108/e24ab1d8-9c3c-4ce0-abee-664fb64bbd16)
